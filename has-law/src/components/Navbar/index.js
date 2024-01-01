@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import { Button } from "reactstrap";
 import { Menu, XCircle } from "react-feather";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
+  const navigate = useNavigate();
   return (
     <div
-      className=" d-flex flex-row align-items-center py-2 paddingComponentRight paddingComponentLeft"
+      className=" d-flex flex-row justify-content-center align-items-center py-2 paddingComponentRight paddingComponentLeft"
       style={{ maxHeight: "80px" }}
     >
       <div
-        className="d-flex justify-content-center align-items-center "
+        className="d-flex justify-content-start align-items-center "
         style={{ width: "25%" }}
       >
         <div className="d-flex">
@@ -36,14 +38,18 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
                   );
                   menuItems.forEach(function (item) {
                     item.classList.remove("active-menu-item");
-                    item.classList.add("text-black");
+                    item.classList.add("text-secondary");
                   });
                   const element = document.getElementById("button-menu-" + i);
-                  element.classList.remove("text-black");
+                  element.classList.remove("text-secondary");
                   element.classList.add("active-menu-item");
+                  navigate(e?.detail);
                 }}
               >
-                <span className="text-menu" id={`button-menu-` + i}>
+                <span
+                  className="text-secondary text-menu"
+                  id={`button-menu-` + i}
+                >
                   {e?.label}
                 </span>
               </Button>
@@ -57,16 +63,24 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
           style={{ zIndex: 999, position: "sticky" }}
         >
           <Menu
-            style={{ color: "#53F60F", cursor: "pointer" }}
+            style={{ color: "#515A5F", cursor: "pointer" }}
             onClick={() => setOpenMenu(!openMenu)}
           />
         </div>
       )}
       {openMenu && (
-        <div className="d-flex d-md-none flex-column overlay px-2 py-4 gap-5">
+        <div
+          className="d-flex d-md-none flex-column overlay px-2 py-4 gap-5"
+          style={{
+            backgroundColor: "#FFF",
+            zIndex: 999,
+            position: "relative",
+            width: "100%",
+          }}
+        >
           <div className="d-flex justify-content-end">
             <XCircle
-              style={{ color: "#53F60F", cursor: "pointer" }}
+              style={{ color: "#515A5F", cursor: "pointer" }}
               onClick={() => setOpenMenu(!openMenu)}
             />
           </div>
@@ -87,13 +101,14 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
                       );
                       menuItems.forEach(function (item) {
                         item.classList.remove("active-menu-item");
-                        item.classList.add("text-danger");
+                        item.classList.add("text-secondary");
                       });
                       const element = document.getElementById(
                         "button-menu-" + i
                       );
-                      element.classList.remove("text-danger");
+                      element.classList.remove("text-secondary");
                       element.classList.add("active-menu-item");
+                      navigate(e?.detail);
                     }}
                   >
                     <span

@@ -44,6 +44,11 @@
   min-width: auto;
 }
 
+.active-menu-item {
+  color: #ff0000; /* Change this to your desired text color */
+  font-weight: 700;
+}
+
 @media (min-width: 768px) {
   .paddingComponentRight {
     padding-right: 52px;
@@ -62,7 +67,7 @@
     letter-spacing: 0.3px;
   }
   .text-menu {
-    color: #515a5f;
+    /* color: #515a5f; */
 
     /* Paragraph/Small */
     font-family: Montserrat;
@@ -132,7 +137,7 @@
     letter-spacing: 0.3px;
   }
   .text-menu {
-    color: #515a5f;
+    /* color: #515a5f; */
 
     /* Paragraph/Small */
     font-family: Montserrat;

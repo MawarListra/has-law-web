@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Navbar,
   Hero,
@@ -9,32 +9,41 @@ import {
   Publications,
 } from "../components";
 import { animateScroll as scroll } from "react-scroll";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import ExpertsDetail from "../components/Experts/Detail";
+import ContentExpertsDetail from "../components/Experts/Detail/contentDetails";
 
 const Homepage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [openMenu, setOpenMenu] = useState(false);
+  // const [activeContent, setActiveContent] = useState();
   const [currType, setCurrType] = useState(1);
   const listMenu = [
     {
       id: "services",
       label: "SERVICES",
+      detail: "/services",
     },
     {
       id: "teams",
       label: "OUR TEAMS",
+      detail: "/experts",
     },
     {
       id: "publications",
       label: "PUBLICATIONS",
+      detail: "/publications",
     },
     {
       id: "pro-bono",
       label: "PRO BONO",
+      detail: "/pro-bono",
     },
     {
       id: "careers",
       label: "CAREERS",
+      detail: "/careers",
     },
   ];
 
@@ -87,6 +96,24 @@ const Homepage = () => {
     }
   });
 
+  const renderContent = useMemo(() => {
+    if (location?.pathname === "/") {
+      return (
+        <>
+          <Hero id="home" />
+          <About />
+          <Services />
+          <Experts />
+          <Publications />
+        </>
+      );
+    } else if (location?.pathname === "/experts") {
+      return <ExpertsDetail />;
+    } else if (location?.pathname === "/experts-detail") {
+      return <ContentExpertsDetail />;
+    }
+  }, [location?.pathname]);
+
   return (
     <div
       className="container-fluid d-flex w-100 flex-column bg-white px-3 px-md-0"
@@ -98,11 +125,7 @@ const Homepage = () => {
         openMenu={openMenu}
         setOpenMenu={setOpenMenu}
       />
-      <Hero id="home" />
-      <About />
-      <Services />
-      <Experts />
-      <Publications />
+      {renderContent}
       <Footer />
     </div>
   );

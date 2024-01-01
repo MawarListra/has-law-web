@@ -1,112 +1,74 @@
 import moment from "moment";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import { Button } from "reactstrap";
 import image1 from "../../assets/services1.png";
 import image2 from "../../assets/services2.png";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+
+const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const Publications = () => {
+  const [displayedData, setDisplayedData] = useState([]);
+
+  const getDisplayedData = async () => {
+    try {
+      const resp = await axios.get(`${baseUrl}v1/publications/getall`);
+      if (resp?.status === 200 && resp?.data?.status === "success") {
+        let temp = resp?.data?.data?.filter((e, i) => i < 4);
+        setDisplayedData(temp);
+      } else {
+        toast.error("Gagal mendappatkan data. Silahkan reload page");
+      }
+    } catch (e) {
+      console.log("cek err", e);
+    }
+  };
+
+  useEffect(() => {
+    getDisplayedData();
+  }, []);
+
+  useEffect(() => {
+    console.log("cek temdisplayedDatap", displayedData);
+  }, [displayedData]);
+
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
         <span className="text-title-section">Publications</span>
       </div>
-      <div className="d-flex flex-column gap-3">
-        <div className="d-flex flex-row justify-content-between align-items-start gap-5 mx-auto">
-          <div className="d-flex flex-column gap-2" style={{ width: "50%" }}>
-            <div className="d-flex w-full " style={{ height: 290 }}>
-              <img className="img-fluid" src={image1} />
-            </div>
-            <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-              <span
-                style={{
-                  color: "#515A5F",
-                  fontFamily: "Montserrat",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "23px",
-                  letterSpacing: "0.5px",
-                }}
+      <div className="d-flex flex-column gap-3 w-100">
+        <div className="d-flex flex-row flex-wrap justify-content-between align-items-start gap-2 mx-auto">
+          {displayedData?.map((e, i) => {
+            return (
+              <div
+                className="d-flex flex-column gap-2"
+                style={{ width: "45%" }}
               >
-                {moment().format("DD MMMM YYYY")}
-              </span>
-              <span className="text-title-services">
-                Dispute Resolution Practices
-              </span>
-            </div>
-          </div>
-          <div className="d-flex flex-column gap-2" style={{ width: "50%" }}>
-            <div className="d-flex w-full " style={{ height: 290 }}>
-              <img className="img-fluid" src={image1} />
-            </div>
-            <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-              <span
-                style={{
-                  color: "#515A5F",
-                  fontFamily: "Montserrat",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "23px",
-                  letterSpacing: "0.5px",
-                }}
-              >
-                {moment().format("DD MMMM YYYY")}
-              </span>
-              <span className="text-title-services">
-                Dispute Resolution Practices
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex flex-row justify-content-between align-items-start gap-5 mx-auto">
-          <div className="d-flex flex-column gap-2" style={{ width: "50%" }}>
-            <div className="d-flex w-full " style={{ height: 290 }}>
-              <img className="img-fluid" src={image1} />
-            </div>
-            <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-              <span
-                style={{
-                  color: "#515A5F",
-                  fontFamily: "Montserrat",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "23px",
-                  letterSpacing: "0.5px",
-                }}
-              >
-                {moment().format("DD MMMM YYYY")}
-              </span>
-              <span className="text-title-services">
-                Dispute Resolution Practices
-              </span>
-            </div>
-          </div>
-          <div className="d-flex flex-column gap-2" style={{ width: "50%" }}>
-            <div className="d-flex w-full " style={{ height: 290 }}>
-              <img className="img-fluid" src={image1} />
-            </div>
-            <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-              <span
-                style={{
-                  color: "#515A5F",
-                  fontFamily: "Montserrat",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "23px",
-                  letterSpacing: "0.5px",
-                }}
-              >
-                {moment().format("DD MMMM YYYY")}
-              </span>
-              <span className="text-title-services">
-                Dispute Resolution Practices
-              </span>
-            </div>
-          </div>
+                <div className="d-flex w-full " style={{ height: 290 }}>
+                  <img className="img-fluid" src={baseUrl + e?.image} />
+                </div>
+                <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
+                  <span
+                    style={{
+                      color: "#515A5F",
+                      fontFamily: "Montserrat",
+                      fontSize: "14px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "23px",
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+                    {moment(e?.createdAt).format("DD MMMM YYYY")}
+                  </span>
+                  <span className="text-title-services">{e?.title}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 

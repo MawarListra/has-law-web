@@ -9,7 +9,7 @@ import Ic2 from "../../assets/Group 3343.png";
 const Footer = ({}) => {
   const navigate = useNavigate();
   return (
-    <div className="d-flex flex-row justify-content-between align-items-center paddingComponentRight paddingComponentLeft">
+    <div className="d-flex flex-row justify-content-between align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
       <div
         className="d-flex flex-column justify-content-start"
         style={{ width: "30%" }}

@@ -4,8 +4,10 @@ import { Button } from "reactstrap";
 import image1 from "../../assets/experts1.png";
 import image2 from "../../assets/experts2.png";
 import image3 from "../../assets/experts3.png";
+import { useNavigate } from "react-router-dom";
 
 const Experts = () => {
+  const navigate = useNavigate();
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
@@ -161,6 +163,7 @@ const Experts = () => {
               lineHeight: "18px",
               fontFamily: "Playfair Display",
             }}
+            onClick={() => navigate("/experts")}
           >
             See More
           </span>
