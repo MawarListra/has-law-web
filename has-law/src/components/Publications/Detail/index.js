@@ -2,14 +2,14 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import { Button } from "reactstrap";
-import image1 from "../../assets/services1.png";
-import image2 from "../../assets/services2.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
-const Publications = () => {
+const PublicationsDetail = () => {
+  const navigate = useNavigate();
   const [displayedData, setDisplayedData] = useState([]);
 
   const getDisplayedData = async () => {
@@ -42,12 +42,18 @@ const Publications = () => {
       <div className="d-flex flex-column gap-3 w-100">
         <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto">
           {displayedData?.map((e, i) => {
+            console.log("cek e", e);
             return (
-              <div
-                className="d-flex flex-column gap-2"
-                style={{ width: "45%" }}
-              >
-                <div className="d-flex w-full " style={{ height: 290 }}>
+              <div className="d-flex flex-column gap-2">
+                <div
+                  className="d-flex w-full "
+                  style={{ height: 290, cursor: "pointer" }}
+                  onClick={() =>
+                    navigate("/publications-detail", {
+                      state: { publicationId: e?.id },
+                    })
+                  }
+                >
                   <img className="img-fluid" src={baseUrl + e?.image} />
                 </div>
                 <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
@@ -71,6 +77,7 @@ const Publications = () => {
           })}
         </div>
       </div>
+
       <div className="d-flex w-100 justify-content-center align-items-center">
         <Button
           style={{
@@ -79,6 +86,7 @@ const Publications = () => {
             backgroundColor: "transparent",
           }}
           outline
+          onClick={() => navigate("/publications")}
         >
           <span
             style={{
@@ -98,4 +106,4 @@ const Publications = () => {
   );
 };
 
-export default Publications;
+export default PublicationsDetail;

@@ -16,7 +16,12 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
         style={{ width: "25%" }}
       >
         <div className="d-flex">
-          <img src={Logo} alt="logo" />
+          <img
+            src={Logo}
+            alt="logo"
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
+          />
         </div>
       </div>
       <div

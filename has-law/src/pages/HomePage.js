@@ -7,11 +7,17 @@ import {
   Services,
   Experts,
   Publications,
+  ProBono,
+  Careers,
 } from "../components";
 import { animateScroll as scroll } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
 import ExpertsDetail from "../components/Experts/Detail";
 import ContentExpertsDetail from "../components/Experts/Detail/contentDetails";
+import ServicesDetail from "../components/Services/Detail";
+import ContentServicesDetail from "../components/Services/Detail/contentDetails";
+import PublicationsDetail from "../components/Publications/Detail";
+import ContentPublicationsDetail from "../components/Publications/Detail/contentDetails";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -111,6 +117,18 @@ const Homepage = () => {
       return <ExpertsDetail />;
     } else if (location?.pathname === "/experts-detail") {
       return <ContentExpertsDetail />;
+    } else if (location?.pathname === "/services") {
+      return <ServicesDetail />;
+    } else if (location?.pathname === "/services-detail") {
+      return <ContentServicesDetail />;
+    } else if (location?.pathname === "/publications") {
+      return <PublicationsDetail />;
+    } else if (location?.pathname === "/publications-detail") {
+      return <ContentPublicationsDetail />;
+    } else if (location?.pathname === "/pro-bono") {
+      return <ProBono />;
+    } else if (location?.pathname === "/careers") {
+      return <Careers />;
     }
   }, [location?.pathname]);
 
@@ -126,6 +144,7 @@ const Homepage = () => {
         setOpenMenu={setOpenMenu}
       />
       {renderContent}
+
       <Footer />
     </div>
   );

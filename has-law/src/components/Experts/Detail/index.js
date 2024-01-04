@@ -137,16 +137,23 @@ const ExpertsDetail = () => {
           return (
             <div
               className="d-flex flex-column gap-2"
-              style={{ width: "25%", position: "relative", cursor: "pointer" }}
+              style={{
+                width: "25%",
+                position: "relative",
+                cursor: "pointer",
+                transition: "height 0.3s ease",
+              }}
               onClick={() =>
                 navigate("/experts-detail", {
                   state: { expertsId: e?.id, currTypdetail: currType },
                 })
               }
+              onMouseOver={(e) => (e.currentTarget.style.height = "320px")} // Change height on hover
+              onMouseOut={(e) => (e.currentTarget.style.height = "290px")} // Revert height on mouse out
             >
               <div
                 className="d-flex w-100"
-                style={{ height: 290, position: "absolute" }}
+                style={{ height: "100%", position: "absolute" }}
               >
                 <img
                   className="img-fluid"
