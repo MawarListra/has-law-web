@@ -53,12 +53,12 @@ const ServicesDetail = () => {
     <>
       <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
         <div className="d-flex justify-content-center align-items-center w-100 paddingComponentRight paddingComponentLeft mx-auto">
-          <span className="text-title-section text-center paddingComponentRight paddingComponentLeft mx-4">
+          <span className="pro-bono-title paddingComponentRight paddingComponentLeft mx-4">
             Hartamulya & team is a full-service law firm for individuals,
             businesses, and organizations, offering diverse legal expertise.
           </span>
         </div>
-        <div className="d-flex flex-row flex-wrap justify-content-between align-items-start gap-5 mx-auto">
+        <div className="d-flex flex-row flex-wrap justify-content-between align-items-start gap-md-5 gap-2 mx-auto">
           {datas.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2">
@@ -89,18 +89,15 @@ const ServicesDetail = () => {
           })}
         </div>
       </div>
-      <div
-        className="d-flex flex-row justify-content-between align-items-end w-100 mt-4"
-        style={{ paddingLeft: 148, paddingRight: 148 }}
-      >
+      <div className="d-flex flex-row justify-content-between align-items-end w-100 mt-4 services-section-detail-bottom">
         <div className="d-flex justify-content-start ">
-          <span className="text-title-section text-left">
+          <span className="pro-bono-title text-left">
             Over the years, Attorneys at Law forged enduring client bonds,
             showcasing excellence and a proven track record, gaining trust
             across diverse sectors.
           </span>
         </div>
-        <div className="d-flex flex-row justify-content-between align-items-end gap-4">
+        <div className="d-md-flex d-none flex-row justify-content-between align-items-end gap-4">
           <ArrowLeftCircle
             style={{ strokeWidth: 1, cursor: "pointer" }}
             color="red"

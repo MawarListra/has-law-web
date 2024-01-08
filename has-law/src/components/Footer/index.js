@@ -11,7 +11,7 @@ import Ic4 from "../../assets/achievment4.png";
 const Footer = ({}) => {
   const navigate = useNavigate();
   return (
-    <div className="d-flex flex-row justify-content-between align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
+    <div className="d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
       {/* <div
         className="d-flex flex-column justify-content-start"
         style={{ width: "30%" }}
@@ -38,11 +38,8 @@ const Footer = ({}) => {
           </span>
         </div>
       </div> */}
-      <div className="d-flex flex-row justify-content-center align-items-start gap-5 w-100">
-        <div
-          className="d-flex flex-column align-items-center"
-          style={{ width: "33%" }}
-        >
+      <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-5 w-100">
+        <div className="d-flex flex-column align-items-center footer-part">
           <span
             style={{
               color: "#303030",
@@ -76,7 +73,7 @@ const Footer = ({}) => {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column" style={{ width: "33%" }}>
+        <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
           <span
             style={{
               color: "#303030",
@@ -92,11 +89,11 @@ const Footer = ({}) => {
             Location
           </span>
           <span className="text-desc-footer">Plaza Sentral 15th Floor</span>
-          <span className="text-desc-footer">
+          <span className="text-desc-footer text-md-left text-center">
             Jln. Jendral Sudirman Kav 47 - 48 Jakarta Selatan 12930 Indonesia
           </span>
         </div>
-        <div className="d-flex flex-column" style={{ width: "33%" }}>
+        <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
           <span
             style={{
               color: "#303030",

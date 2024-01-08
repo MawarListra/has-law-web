@@ -1,14 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/logo.png";
 import { Button } from "reactstrap";
 import { Menu, XCircle } from "react-feather";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [currPath, setCurrPath] = useState("/");
+  const [currIdx, setCurrIdx] = useState(0);
+
+  useEffect(() => {
+    let str = location.pathname.split("-");
+    console.log("cek str", str);
+    if (str.includes(currPath)) {
+      var menuItems = document.querySelectorAll(
+        "#container-button-menu div button span"
+      );
+      menuItems.forEach(function (item) {
+        item.classList.remove("active-menu-item");
+        item.classList.add("text-secondary");
+      });
+      const element = document.getElementById("button-menu-" + currIdx);
+      element.classList.remove("text-secondary");
+      element.classList.add("active-menu-item");
+    }
+  }, [currPath]);
+
   return (
     <div
-      className=" d-flex flex-row justify-content-center align-items-center py-2 paddingComponentRight paddingComponentLeft"
+      className=" d-flex flex-row justify-content-md-center justify-content-between align-items-center py-2 paddingComponentRight paddingComponentLeft"
       style={{ maxHeight: "80px" }}
     >
       <div
@@ -38,6 +59,8 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
                 color="transparent"
                 onClick={() => {
                   scrollToDiv(e?.id);
+                  setCurrPath(e?.detail);
+                  setCurrIdx(i);
                   var menuItems = document.querySelectorAll(
                     "#container-button-menu div button span"
                   );
@@ -100,6 +123,8 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
                     color="transparent"
                     onClick={() => {
                       scrollToDiv(e?.id);
+                      setCurrPath(e?.detail);
+                      setCurrIdx(i);
                       setOpenMenu(!openMenu);
                       var menuItems = document.querySelectorAll(
                         "#container-button-menu div button span"

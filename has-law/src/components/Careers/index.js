@@ -14,33 +14,22 @@ const Careers = () => {
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-flex flex-column justify-content-center align-items-center w-75 px-4 mx-auto">
-        <span className="text-title-section text-center px-4 mx-4">
+      <div className="d-flex flex-column justify-content-center align-items-center w-md-75 w-100 px-md-4 px-0 mx-auto">
+        <span className="pro-bono-title text-center px-md-4 px-0 mx-md-4 mx-auto">
           #LifeatHASLAW
         </span>
-        <span
-          className="text-center"
-          style={{
-            color: "#515A5F",
-            fontFamily: "Montserrat",
-            fontSize: "24px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "normal",
-            letterSpacing: "0.5px",
-          }}
-        >
-          <span style={{ color: "#F00", fontWeight: 700 }}>
-            HAS Attorneys at Law
-          </span>{" "}
-          believes in the power of a team; therefore, we only select candidates
-          with outstanding performance in school yet have good personalities and
-          behavior Our team comprises of Senior Partner, Partner, Mid-Associate,
-          Junior Associate, Associate, and Paralegal.
+        <span className="pro-bono-title">
+          HAS Attorneys at Law{" "}
+          <span style={{ color: "#515A5F", fontWeight: 400 }}>
+            believes in the power of a team; therefore, we only select
+            candidates with outstanding performance in school yet have good
+            personalities and behavior Our team comprises of Senior Partner,
+            Partner, Mid-Associate, Junior Associate, Associate, and Paralegal.
+          </span>
         </span>
       </div>
       <div
-        className="d-flex flex-row justify-content-center align-items-cenetr gap-3"
+        className="d-md-flex d-none flex-row justify-content-center gap-3"
         style={{ height: 343 }}
       >
         <div className="d-flex w-50">
@@ -57,20 +46,27 @@ const Careers = () => {
           </div>
         </div>
       </div>
+      <div
+        className="d-flex d-md-none flex-column justify-content-center gap-2 w-100"
+        style={{ height: 421 }}
+      >
+        <div className="d-flex w-100" style={{ height: 205 }}>
+          <img className="d-flex img-fluid" src={imgHas} />
+        </div>
+        <div className="d-flex flex-column justify-content-between w-100 mx-auto gap-2">
+          <div className="d-flex flex-row gap-2 " style={{ width: "49%" }}>
+            <img className="d-flex img-fluid" src={imgHasLittle} />
+            <img className="d-flex img-fluid" src={imgHasLittle} />
+          </div>
+          <div className="d-flex flex-row gap-2 " style={{ width: "49%" }}>
+            <img className="d-flex img-fluid" src={imgHasLittle} />
+            <img className="d-flex img-fluid" src={imgHasLittle} />
+          </div>
+        </div>
+      </div>
       <div className="d-flex justify-content-center align-items-center w-100">
-        <div className="d-flex w-50">
-          <span
-            className="text-center"
-            style={{
-              color: "#292D32",
-              fontFamily: "Montserrat",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "23px",
-              letterSpacing: "0.5px",
-            }}
-          >
+        <div className="d-flex w-md-50 w-100">
+          <span className="pro-bono-subtitle text-center">
             <span
               style={{
                 color: "#F00",

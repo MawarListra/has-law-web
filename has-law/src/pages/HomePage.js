@@ -18,13 +18,13 @@ import ServicesDetail from "../components/Services/Detail";
 import ContentServicesDetail from "../components/Services/Detail/contentDetails";
 import PublicationsDetail from "../components/Publications/Detail";
 import ContentPublicationsDetail from "../components/Publications/Detail/contentDetails";
+import IcWA from "../assets/ic_whatsapp.png";
 
 const Homepage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState(false);
   // const [activeContent, setActiveContent] = useState();
-  const [currType, setCurrType] = useState(1);
   const listMenu = [
     {
       id: "services",
@@ -144,7 +144,11 @@ const Homepage = () => {
         setOpenMenu={setOpenMenu}
       />
       {renderContent}
-
+      {location?.pathname !== "/" && (
+        <div className="d-flex p-2 ic-whatsapp">
+          <img className="d-flex w-auto" src={IcWA} />
+        </div>
+      )}
       <Footer />
     </div>
   );

@@ -33,21 +33,17 @@ const Experts = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+    <div className="d-flex flex-column justify-content-between align-items-start experts-section gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="text-title-section">Meet Our Experts</span>
+        <span className="pro-bono-title">Meet Our Experts</span>
       </div>
-      <div
-        className="d-flex flex-row justify-content-center align-items-end paddingComponentRight paddingComponentLeft mx-auto text-center gap-4"
-        style={{ height: 300 }}
-      >
+      <div className="d-flex flex-row justify-content-md-center justify-content-between align-items-end experts-section-img text-center gap-4 w-100">
         {datas.map((e, i) => {
           if (i < 3) {
             return (
               <div
-                className="d-flex flex-column gap-2"
+                className="d-flex flex-column gap-2 experts-section-img-each"
                 style={{
-                  width: "25%",
                   position: "relative",
                   cursor: "pointer",
                   transition: "height 0.3s ease",
@@ -61,14 +57,14 @@ const Experts = () => {
                 onMouseOut={(e) => (e.currentTarget.style.height = "290px")} // Revert height on mouse out
               >
                 <div
-                  className="d-flex w-100 "
+                  className="d-flex w-100"
                   style={{
                     height: "100%",
                     position: "absolute",
                   }}
                 >
                   <img
-                    className="img-fluid"
+                    className="d-flex img-fluid"
                     src={baseUrl + e?.image}
                     style={{ width: "100%" }}
                     alt="Image"

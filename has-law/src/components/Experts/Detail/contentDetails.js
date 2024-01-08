@@ -30,24 +30,18 @@ const ContentExpertsDetail = () => {
       console.log("cek err", e);
     }
   };
-
   useEffect(() => {
-    console.log("cek here");
     getDetail();
   }, [expertsId]);
-  console.log("cek expertsId", expertsId);
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-center paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="text-title-section">Meet Our Experts</span>
+        <span className="pro-bono-title">Meet Our Experts</span>
       </div>
-      <div className="d-flex flex-row justify-content-center align-items-start gap-5 w-50">
-        <div
-          className="d-flex flex-column justify-content-start w-auto"
-          // style={{ width: "50%" }}
-        >
-          <div className="d-flex w-auto" style={{ height: 290 }}>
+      <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-5 gap-2 w-md-50 w-100">
+        <div className="d-flex flex-column justify-content-md-start justify-content-center experts-section-detail-img-each">
+          <div className="d-flex experts-section-detail-img">
             <img
               className="img-fluid"
               src={baseUrl + detail?.image}
@@ -55,7 +49,7 @@ const ContentExpertsDetail = () => {
               alt="Image"
             />
           </div>
-          <div className="d-flex  flex-column ">
+          <div className="d-flex flex-column ">
             <span
               className="text-left"
               style={{
@@ -88,8 +82,8 @@ const ContentExpertsDetail = () => {
           </div>
         </div>
         <div
-          className="d-flex w-50 justify-content-evenly"
-          style={{ wordBreak: "break-word", textAlign: "justify" }}
+          className="d-flex w-md-50 w-100 justify-content-md-evenly text-md-justify text-left mt-md-0 mt-4"
+          style={{ wordBreak: "break-word" }}
         >
           <span
             style={{

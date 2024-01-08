@@ -55,7 +55,7 @@ const ExpertsDetail = () => {
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="text-title-section">Meet Our Experts</span>
+        <span className="pro-bono-title">Meet Our Experts</span>
       </div>
       <div
         className="d-flex flex-row justify-content-center w-100"
@@ -128,17 +128,17 @@ const ExpertsDetail = () => {
             </Button>
           );
         })}
-      </div>
+      </div>{" "}
       <div
-        className="d-flex flex-row justify-content-between align-items-end paddingComponentRight paddingComponentLeft mx-auto text-center gap-4"
-        style={{ height: 300 }}
+        className="d-flex flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img"
+        style={{ overflow: "scroll" }}
       >
         {datas.map((e, i) => {
           return (
             <div
-              className="d-flex flex-column gap-2"
+              className="d-flex flex-column gap-2 experts-section-detail-img-each"
               style={{
-                width: "25%",
+                // width: "auto",
                 position: "relative",
                 cursor: "pointer",
                 transition: "height 0.3s ease",
@@ -156,15 +156,15 @@ const ExpertsDetail = () => {
                 style={{ height: "100%", position: "absolute" }}
               >
                 <img
-                  className="img-fluid"
+                  className="d-flex img-fluid"
                   src={baseUrl + e?.image}
                   style={{ width: "100%" }}
                   alt="Image"
                 />
               </div>
               <div
-                className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 "
-                style={{ zIndex: 999, height: 290 }}
+                className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-detail-name-each"
+                style={{ zIndex: 999 }}
               >
                 <span
                   style={{

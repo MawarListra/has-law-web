@@ -34,27 +34,17 @@ const ContentServicesDetail = () => {
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-flex justify-content-center align-items-center w-100 px-4 mx-auto">
-        <span className="text-title-section text-center px-4 mx-4">
+      <div className="d-flex justify-content-center align-items-center w-100 px-md-4 px-0 mx-auto">
+        <span className="pro-bono-title text-center px-md-4 px-0 mx-md-4 mx-0">
           {detail?.data?.name}
         </span>
       </div>
-      <div className="d-flex flex-row justify-content-between align-items-start gap-5 w-100">
-        <div className="flex flex-column w-50">
+      <div className="d-flex flex-md-row flex-column justify-content-between align-items-start gap-md-5 gap-2 w-100">
+        <div className="flex flex-column w-md-50 w-100">
           {detail?.services?.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2 justify-content-start mb-4">
-                <span
-                  style={{
-                    color: "#F00",
-                    fontFamily: "Montserrat",
-                    fontSize: "24px",
-                    fontStyle: "normal",
-                    fontWeight: 700,
-                    lineHeight: "normal",
-                    letterSpacing: "0.5px",
-                  }}
-                >
+                <span className="services-sectiont-detail-paragraph-title">
                   {e?.name}
                 </span>
                 <span

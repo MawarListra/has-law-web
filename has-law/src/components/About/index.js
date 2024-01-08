@@ -5,8 +5,8 @@ import image3 from "../../assets/About3.png";
 
 const About = () => {
   return (
-    <div className="d-flex flex-row justify-content-between align-items-start paddingComponentRight paddingComponentLeft mx-auto gap-5 py-4">
-      <div className="d-flex flex-column" style={{ width: "50%" }}>
+    <div className="d-flex flex-md-row flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft mx-auto gap-md-5 gap-2 py-4">
+      <div className="d-flex flex-column w-md-50 w-100">
         <span className="text-title-section">
           {`HARTAMULYA, ANDRYANUS SIAHAAN (HAS Attorneys at Law)`}
         </span>
@@ -25,17 +25,17 @@ const About = () => {
           <span style={{ color: "#F00", fontWeight: "bold" }}>Read more</span>
         </span>
       </div>
-      <div className="d-flex flex-row gap-2" style={{ width: "50%" }}>
+      <div className="d-flex flex-row gap-2 w-md-50 w-100">
         <div className="d-flex flex-column gap-2">
           <div>
-            <img src={image1} />
+            <img className="d-flex img-fluid" src={image1} />
           </div>
           <div>
-            <img src={image2} />
+            <img className="d-flex img-fluid" src={image2} />
           </div>
         </div>
         <div>
-          <img src={image3} />
+          <img className="d-flex img-fluid" src={image3} />
         </div>
       </div>
     </div>

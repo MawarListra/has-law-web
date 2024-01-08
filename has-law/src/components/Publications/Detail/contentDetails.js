@@ -38,8 +38,8 @@ const ContentPublicationsDetail = () => {
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-flex flex-column justify-content-start align-items-start w-75 ">
-        <span className="text-title-section text-black text-left">
+      <div className="d-flex flex-column justify-content-start align-items-start w-md-75 w-100 ">
+        <span className="publication-detail-title text-left">
           {detail?.title}
         </span>
         <span
@@ -47,7 +47,7 @@ const ContentPublicationsDetail = () => {
           style={{
             color: "#515A5F",
             fontFamily: "Montserrat",
-            fontSize: "14px",
+            fontSize: "16px",
             fontStyle: "normal",
             fontWeight: 400,
             lineHeight: "23px",
@@ -57,10 +57,10 @@ const ContentPublicationsDetail = () => {
           {moment(detail?.createdAt).format("DD MMMM YYYY")}
         </span>
       </div>
-      <div className="d-flex flex-row gap-3 border-bottom pb-4">
-        <div className="d-flex flex-column w-75 gap-2">
-          <div className="d-flex w-100">
-            <img className="d-flex" src={baseUrl + detail?.image} />
+      <div className="d-flex flex-md-row flex-column gap-3 border-md-bottom border-none pb-4">
+        <div className="d-flex flex-column w-md-75 w-100 gap-2">
+          <div className="d-flex publication-detail-img">
+            <img className="d-flex img-fluid" src={baseUrl + detail?.image} />
           </div>
           <div>
             <span
@@ -136,22 +136,11 @@ const ContentPublicationsDetail = () => {
       </div>
       <div className="d-flex flex-column py-4 w-100 gap-4">
         <div className="d-flex justify-content-center align-items-center ">
-          <span
-            style={{
-              color: "#292D32",
-              textAlign: "center",
-              fontFamily: "Montserrat",
-              fontSize: "24px",
-              fontStyle: "normal",
-              fontWeight: 700,
-              lineHeight: "normal",
-              letterSpacing: "0.5px",
-            }}
-          >
+          <span className="publication-detail-more-publication">
             More Publications
           </span>
         </div>
-        <div className="d-flex flex-row flex-wrap w-100 gap-2">
+        <div className="d-flex flex-md-row flex-column flex-md-wrap justify-content-between w-100 gap-2">
           {others?.map((e, i) => {
             if (i < 3) {
               return (
@@ -160,12 +149,9 @@ const ContentPublicationsDetail = () => {
                   style={{ maxWidth: "376px" }}
                 >
                   <div
-                    className="d-flex w-full "
+                    className="d-flex publication-detail-more-publication-img"
                     style={{
                       cursor: "pointer",
-                      width: "376px",
-                      height: "204px",
-                      flexShrink: 0,
                     }}
                     onClick={() =>
                       navigate("/publications-detail", {
@@ -189,19 +175,7 @@ const ContentPublicationsDetail = () => {
                     >
                       {moment(e?.createdAt).format("DD MMMM YYYY")}
                     </span>
-                    <span
-                      style={{
-                        color: "#515A5F",
-                        fontFamily: "Montserrat",
-                        fontSize: "16px",
-                        fontStyle: "normal",
-                        fontWeight: 700,
-                        lineHeight: "normal",
-                        letterSpacing: "0.5px",
-                      }}
-                    >
-                      {e?.title}
-                    </span>
+                    <span className="publication-title">{e?.title}</span>
                   </div>
                 </div>
               );

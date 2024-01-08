@@ -14,17 +14,21 @@ const ProBono = () => {
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-flex justify-content-center align-items-center w-75 px-4 mx-auto">
-        <span className="text-title-section text-center px-4 mx-4">
+      <div className="d-md-none d-flex w-100">
+        <img className="d-flex w-100" src={imgProBono} />
+      </div>
+      <div className="d-flex justify-content-center align-items-center w-md-75 w-100 px-md-4 px-0 mx-auto ">
+        <span className="pro-bono-title text-center px-md-4 px-0 mx-md-4 mx-auto">
           HAS also engaged in meaningful pro bono work aimed not only at the
           public good yet also to set a legal breakthrough on national law
         </span>
       </div>
-      <div className="d-flex w-100 border-bottom pb-4">
+      <div className="d-flex d-md-none border-bottom w-100"></div>
+      <div className="d-md-flex d-none w-100 border-bottom pb-4">
         <img className="d-flex w-100" src={imgProBono} />
       </div>
       <div className="d-flex flex-row justify-content-between align-items-start gap-4 mx-auto">
-        <div className="d-flex">
+        <div className="d-md-flex d-none">
           <img className="d-flex w-auto" src={icProBono} />
         </div>
         <div className="d-flex flex-column gap-2">

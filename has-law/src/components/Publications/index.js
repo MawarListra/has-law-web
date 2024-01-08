@@ -6,10 +6,12 @@ import image1 from "../../assets/services1.png";
 import image2 from "../../assets/services2.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const Publications = () => {
+  const navigate = useNavigate();
   const [displayedData, setDisplayedData] = useState([]);
 
   const getDisplayedData = async () => {
@@ -37,34 +39,29 @@ const Publications = () => {
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="text-title-section">Publications</span>
+        <span className="pro-bono-title">Publications</span>
       </div>
       <div className="d-flex flex-column gap-3 w-100">
         <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto">
           {displayedData?.map((e, i) => {
             return (
-              <div
-                className="d-flex flex-column gap-2"
-                style={{ width: "45%" }}
-              >
-                <div className="d-flex w-full " style={{ height: 290 }}>
+              <div className="d-flex flex-column gap-2 publication-part">
+                <div
+                  className="d-flex w-full publication-img"
+                  style={{ cursor: "pointer" }}
+                  onClick={() =>
+                    navigate("/publications-detail", {
+                      state: { publicationId: e?.id },
+                    })
+                  }
+                >
                   <img className="img-fluid" src={baseUrl + e?.image} />
                 </div>
                 <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-                  <span
-                    style={{
-                      color: "#515A5F",
-                      fontFamily: "Montserrat",
-                      fontSize: "14px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "23px",
-                      letterSpacing: "0.5px",
-                    }}
-                  >
+                  <span className="publication-date">
                     {moment(e?.createdAt).format("DD MMMM YYYY")}
                   </span>
-                  <span className="text-title-services">{e?.title}</span>
+                  <span className="publication-title">{e?.title}</span>
                 </div>
               </div>
             );
@@ -79,6 +76,7 @@ const Publications = () => {
             backgroundColor: "transparent",
           }}
           outline
+          onClick={() => navigate("/publications")}
         >
           <span
             style={{
