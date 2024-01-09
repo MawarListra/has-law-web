@@ -37,12 +37,12 @@ const Publications = () => {
   }, [displayedData]);
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+    <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex justify-content-center align-items-center w-100">
         <span className="pro-bono-title">Publications</span>
       </div>
       <div className="d-flex flex-column gap-3 w-100">
-        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto">
+        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-3 mx-auto">
           {displayedData?.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2 publication-part">
@@ -50,7 +50,7 @@ const Publications = () => {
                   className="d-flex w-full publication-img"
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    navigate("/publications-detail", {
+                    navigate(`/publications-detail/${e?.id}`, {
                       state: { publicationId: e?.id },
                     })
                   }

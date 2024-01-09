@@ -33,8 +33,8 @@ const Experts = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start experts-section gap-4 py-4">
-      <div className="d-flex justify-content-center align-items-center w-100">
+    <div className="container-fluid d-flex flex-column justify-content-between align-items-start experts-section gap-4 py-4">
+      <div className="d-flex justify-content-center align-items-center w-100 pb-4">
         <span className="pro-bono-title">Meet Our Experts</span>
       </div>
       <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
@@ -53,8 +53,8 @@ const Experts = () => {
                     state: { expertsId: e?.id, currTypdetail: "partner" },
                   })
                 }
-                onMouseOver={(e) => (e.currentTarget.style.height = "320px")} // Change height on hover
-                onMouseOut={(e) => (e.currentTarget.style.height = "290px")} // Revert height on mouse out
+                onMouseOver={(e) => (e.currentTarget.style.height = "452px")} // Change height on hover
+                onMouseOut={(e) => (e.currentTarget.style.height = "419px")} // Revert height on mouse out
               >
                 <div
                   className="d-flex w-100"
@@ -71,7 +71,7 @@ const Experts = () => {
                   />
                 </div>
                 <div
-                  className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-detail-name-each"
+                  className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-name-each"
                   style={{ zIndex: 999 }}
                 >
                   <span

@@ -11,7 +11,7 @@ import Ic4 from "../../assets/achievment4.png";
 const Footer = ({}) => {
   const navigate = useNavigate();
   return (
-    <div className="d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
+    <div className="container-fluid d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
       {/* <div
         className="d-flex flex-column justify-content-start"
         style={{ width: "30%" }}

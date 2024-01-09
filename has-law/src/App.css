@@ -49,6 +49,20 @@
   font-weight: 700;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white; /* Semi-transparent black overlay */
+  z-index: 9999;
+}
+
+.overlay.active {
+  display: block; /* Show the overlay when it has the 'active' class */
+}
+
 @media (min-width: 768px) {
   .paddingComponentRight {
     padding-right: 52px;
@@ -110,12 +124,13 @@
   }
   .hero-background {
     background-image: url("./assets/heroImage.png");
-    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 744;
-    max-height: 90vh;
-    width: auto;
+    background-size: cover;
+    height: 100vh;
+    min-height: 25em;
+    position: relative;
+    width: 100%;
   }
   .footer-part {
     width: "33%";
@@ -183,8 +198,8 @@
   .ic-whatsapp {
     width: fit-content;
     border-radius: 50%;
-    box-shadow: "1px 1px 20px rgba(0, 0, 0, 0.2)";
-    position: absolute;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    position: fixed;
     z-index: 999;
     right: 56px;
     top: 719px;
@@ -220,10 +235,15 @@
     background-color: #f4f4f4;
   }
   .experts-section-img {
-    height: 300px;
+    height: 419px;
   }
   .experts-section-img-each {
-    width: 25%;
+    height: 419px;
+    width: 321px;
+  }
+  .experts-section-name-each {
+    height: 419px;
+    width: 321px;
   }
   .experts-section-detail-img-each {
     width: 25%;
@@ -259,7 +279,7 @@
     padding: 32px;
   }
   .hero-div {
-    height: 600px;
+    height: 100vh;
     top: 0;
     position: relative;
   }
@@ -325,14 +345,16 @@
     letter-spacing: 0.5px;
   }
   .hero-background {
-    background-image: url("./assets/heroImage.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* background-image: url("./assets/heroImage.png"); */
+
+    /* background-repeat: no-repeat;
     background-position: center;
-    width: 375px;
-    height: 190.041px;
-    flex-shrink: 0;
-    display: none;
+    background-size: cover; */
+    /* height: 100vh; */
+    /* min-height: 25em; */
+    position: relative;
+    width: 100%;
+    background-color: black;
   }
   .footer-part {
     width: 100%;
@@ -445,6 +467,12 @@
     height: 337px;
     /* flex-shrink: 0; */
   }
+  .experts-section-name-each {
+    width: 100%;
+    min-width: 258px;
+    height: 337px;
+    /* flex-shrink: 0; */
+  }
   .experts-section-detail-img-each {
     width: 343px;
     height: 448px;
@@ -477,5 +505,10 @@
   }
   .hero-div {
     height: 416px;
+  }
+  .navbar-logo {
+    width: 48px;
+    height: 45px;
+    flex-shrink: 0;
   }
 }

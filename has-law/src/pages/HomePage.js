@@ -102,14 +102,40 @@ const Homepage = () => {
     }
   });
 
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 4144; // Adjust this threshold as needed
+      const shouldShowNavbar = window.scrollY < scrollThreshold;
+      setShowNavbar(shouldShowNavbar);
+
+      // Check if scrolled to the top or below the Hero component
+      console.log("cek pathname", location?.pathname);
+      if (location?.pathname !== "/") {
+        setShowNavbar(shouldShowNavbar);
+      } else if (window.scrollY === 0) {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location?.pathname]);
+
   const renderContent = useMemo(() => {
     const str = location?.pathname.split("/");
+    console.log("cek str", str);
     if (location?.pathname === "/") {
       return (
         <>
-          <Hero id="home" />
-          <About />
-          <Services />
+          <Hero id="home" scrollToDiv={() => scrollToDiv("about")} />
+          <About id={"about"} />
+          <Services id={"services"} />
           <Experts />
           <Publications />
         </>
@@ -135,15 +161,19 @@ const Homepage = () => {
 
   return (
     <div
-      className="container-fluid d-flex w-100 flex-column bg-white px-3 px-md-0"
+      className={`d-flex w-100 flex-column bg-white px-3 px-md-0 ${
+        location?.pathname !== "/" ? "container-fluid" : ""
+      }`}
       style={{ position: "relative", overflowX: "hidden" }}
     >
-      <Navbar
-        listMenu={listMenu}
-        scrollToDiv={scrollToDiv}
-        openMenu={openMenu}
-        setOpenMenu={setOpenMenu}
-      />
+      {showNavbar && (
+        <Navbar
+          listMenu={listMenu}
+          scrollToDiv={scrollToDiv}
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+        />
+      )}
       {renderContent}
       {location?.pathname !== "/" && (
         <div className="d-flex p-2 ic-whatsapp">

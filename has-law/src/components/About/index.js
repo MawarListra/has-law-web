@@ -3,9 +3,12 @@ import image1 from "../../assets/About1.png";
 import image2 from "../../assets/About2.png";
 import image3 from "../../assets/About3.png";
 
-const About = () => {
+const About = ({ id }) => {
   return (
-    <div className="d-flex flex-md-row flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft mx-auto gap-md-5 gap-2 py-4">
+    <div
+      className="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft mx-auto gap-md-5 gap-2 py-4"
+      id={id}
+    >
       <div className="d-flex flex-column w-md-50 w-100">
         <span className="text-title-section">
           {`HARTAMULYA, ANDRYANUS SIAHAAN (HAS Attorneys at Law)`}

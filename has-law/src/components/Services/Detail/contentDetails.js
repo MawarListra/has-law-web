@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const ContentServicesDetail = () => {
   const [detail, setDetail] = useState([]);
+  const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   const { servicesId } = location.state;
@@ -15,7 +16,7 @@ const ContentServicesDetail = () => {
   const getDetail = async () => {
     try {
       const resp = await axios.get(
-        `${baseUrl}v1/main_services/getdetail/${servicesId}`
+        `${baseUrl}v1/main_services/getdetail/${id}`
       );
       if (resp?.status === 200 && resp?.data?.status === "success") {
         console.log("cek resp", resp);
@@ -30,7 +31,7 @@ const ContentServicesDetail = () => {
 
   useEffect(() => {
     getDetail();
-  }, []);
+  }, [id]);
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">

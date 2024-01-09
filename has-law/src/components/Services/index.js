@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
-const Services = () => {
+const Services = ({ id }) => {
   const [datas, setDatas] = useState([]);
   const navigate = useNavigate();
 
@@ -30,7 +30,10 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+    <div
+      className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4"
+      id={id}
+    >
       <div className="d-flex justify-content-center align-items-center w-100 px-md-4 px-0 mx-auto">
         <span className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0">
           Hartamulya & team is a full-service law firm for individuals,
@@ -55,7 +58,7 @@ const Services = () => {
                   <span className="text-title-services">{e?.name}</span>
                   <ArrowRight
                     onClick={() =>
-                      navigate("/services-detail", {
+                      navigate(`/services-detail/${e?.id}`, {
                         state: { servicesId: e?.id },
                       })
                     }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
 import moment from "moment";
 import { Button } from "reactstrap";
 
@@ -14,12 +14,11 @@ const ContentPublicationsDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { publicationId } = location.state;
+  const { id } = useParams();
 
   const getDetail = async () => {
     try {
-      const resp = await axios.get(
-        `${baseUrl}v1/publications/getdetail/${publicationId}`
-      );
+      const resp = await axios.get(`${baseUrl}v1/publications/getdetail/${id}`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
         console.log("cek resp", resp);
         setDetail(resp?.data?.data);
@@ -34,7 +33,7 @@ const ContentPublicationsDetail = () => {
 
   useEffect(() => {
     getDetail();
-  }, []);
+  }, [id]);
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
@@ -98,7 +97,7 @@ const ContentPublicationsDetail = () => {
                 className="d-flex flex-column gap-1 border-bottom pb-2"
                 style={{ cursor: "pointer" }}
                 onClick={() =>
-                  navigate("/publications-detail", {
+                  navigate(`/publications-detail/${e?.id}`, {
                     state: { publicationId: e?.id },
                   })
                 }
@@ -154,7 +153,7 @@ const ContentPublicationsDetail = () => {
                       cursor: "pointer",
                     }}
                     onClick={() =>
-                      navigate("/publications-detail", {
+                      navigate(`/publications-detail/${id}`, {
                         state: { publicationId: e?.id },
                       })
                     }

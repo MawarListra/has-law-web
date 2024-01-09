@@ -2,12 +2,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import { ArrowLeftCircle, ArrowRight, ArrowRightCircle } from "react-feather";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const ServicesDetail = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
   const [datas, setDatas] = useState([]);
   const [services, setServices] = useState([]);
 
@@ -51,6 +52,7 @@ const ServicesDetail = () => {
 
   return (
     <>
+      {" "}
       <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
         <div className="d-flex justify-content-center align-items-center w-100 paddingComponentRight paddingComponentLeft mx-auto">
           <span className="pro-bono-title paddingComponentRight paddingComponentLeft mx-4">
@@ -75,7 +77,7 @@ const ServicesDetail = () => {
                   <span className="text-title-services">{e?.name}</span>
                   <ArrowRight
                     onClick={() =>
-                      navigate("/services-detail", {
+                      navigate(`/services-detail/${e?.id}`, {
                         state: {
                           servicesId: e?.id,
                         },

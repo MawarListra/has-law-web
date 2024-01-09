@@ -13,7 +13,7 @@ const ProBono = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+    <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-md-none d-flex w-100">
         <img className="d-flex w-100" src={imgProBono} />
       </div>

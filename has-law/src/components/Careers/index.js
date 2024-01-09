@@ -13,7 +13,7 @@ const Careers = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+    <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
       <div className="d-flex flex-column justify-content-center align-items-center w-md-75 w-100 px-md-4 px-0 mx-auto">
         <span className="pro-bono-title text-center px-md-4 px-0 mx-md-4 mx-auto">
           #LifeatHASLAW
@@ -29,13 +29,13 @@ const Careers = () => {
         </span>
       </div>
       <div
-        className="d-md-flex d-none flex-row justify-content-center gap-3"
+        className="d-md-flex d-none flex-row justify-content-center align-items-center w-100 mx-auto gap-3"
         style={{ height: 343 }}
       >
-        <div className="d-flex w-50">
-          <img className="d-flex" src={imgHas} />
+        <div className="d-flex w-50 justify-content-center align-items-center">
+          <img className="d-flex img-fluid" src={imgHas} />
         </div>
-        <div className="d-flex flex-column justify-content-between">
+        <div className="d-flex flex-column justify-content-between gap-3">
           <div className="d-flex flex-row gap-3">
             <img className="d-flex w-auto" src={imgHasLittle} />
             <img className="d-flex w-auto" src={imgHasLittle} />
