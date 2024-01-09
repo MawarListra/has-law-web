@@ -6,7 +6,7 @@ import image2 from "../../../assets/experts2.png";
 import image3 from "../../../assets/experts3.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
@@ -15,12 +15,11 @@ const ContentExpertsDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { expertsId, currTypdetail } = location.state;
+  const { id } = useParams();
 
   const getDetail = async () => {
     try {
-      const resp = await axios.get(
-        `${baseUrl}v1/partner/getdetail/${expertsId}`
-      );
+      const resp = await axios.get(`${baseUrl}v1/partner/getdetail/${id}`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
         setDetail(resp?.data?.data);
       } else {
@@ -32,7 +31,7 @@ const ContentExpertsDetail = () => {
   };
   useEffect(() => {
     getDetail();
-  }, [expertsId]);
+  }, [id]);
 
   return (
     <div className="d-flex flex-column justify-content-between align-items-center paddingComponentRight paddingComponentLeft gap-4 py-4">

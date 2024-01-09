@@ -184,11 +184,11 @@
     width: fit-content;
     border-radius: 50%;
     box-shadow: "1px 1px 20px rgba(0, 0, 0, 0.2)";
-    position: "absolute";
+    position: absolute;
     z-index: 999;
     right: 56px;
     top: 719px;
-    background-color: "white";
+    background-color: white;
     cursor: "pointer";
   }
   .pro-bono-title {
@@ -217,10 +217,9 @@
   .experts-section {
     padding-right: 52px;
     padding-left: 52px;
+    background-color: #f4f4f4;
   }
   .experts-section-img {
-    padding-right: 52px;
-    padding-left: 52px;
     height: 300px;
   }
   .experts-section-img-each {
@@ -444,6 +443,7 @@
     width: 100%;
     min-width: 258px;
     height: 337px;
+    /* flex-shrink: 0; */
   }
   .experts-section-detail-img-each {
     width: 343px;

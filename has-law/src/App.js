@@ -31,7 +31,7 @@ function App() {
           }
         />
         <Route
-          path="/experts-detail"
+          path="/experts-detail/:id"
           element={
             <Homepage>
               <ContentExpertsDetail />
@@ -48,7 +48,7 @@ function App() {
           }
         />
         <Route
-          path="/services-detail"
+          path="/services-detail/:id"
           element={
             <Homepage>
               <ContentServicesDetail />
@@ -65,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/publications-detail"
+          path="/publications-detail/:id"
           element={
             <Homepage>
               <ContentPublicationsDetail />

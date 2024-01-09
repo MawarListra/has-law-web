@@ -103,6 +103,7 @@ const Homepage = () => {
   });
 
   const renderContent = useMemo(() => {
+    const str = location?.pathname.split("/");
     if (location?.pathname === "/") {
       return (
         <>
@@ -113,21 +114,21 @@ const Homepage = () => {
           <Publications />
         </>
       );
-    } else if (location?.pathname === "/experts") {
+    } else if (str.includes("experts")) {
       return <ExpertsDetail />;
-    } else if (location?.pathname === "/experts-detail") {
+    } else if (str.includes("experts-detail")) {
       return <ContentExpertsDetail />;
-    } else if (location?.pathname === "/services") {
+    } else if (str.includes("services")) {
       return <ServicesDetail />;
-    } else if (location?.pathname === "/services-detail") {
+    } else if (str.includes("services-detail")) {
       return <ContentServicesDetail />;
-    } else if (location?.pathname === "/publications") {
+    } else if (str.includes("publications")) {
       return <PublicationsDetail />;
-    } else if (location?.pathname === "/publications-detail") {
+    } else if (str.includes("publications-detail")) {
       return <ContentPublicationsDetail />;
-    } else if (location?.pathname === "/pro-bono") {
+    } else if (str.includes("pro-bono")) {
       return <ProBono />;
-    } else if (location?.pathname === "/careers") {
+    } else if (str.includes("careers")) {
       return <Careers />;
     }
   }, [location?.pathname]);

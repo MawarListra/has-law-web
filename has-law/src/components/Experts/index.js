@@ -37,7 +37,7 @@ const Experts = () => {
       <div className="d-flex justify-content-center align-items-center w-100">
         <span className="pro-bono-title">Meet Our Experts</span>
       </div>
-      <div className="d-flex flex-row justify-content-md-center justify-content-between align-items-end experts-section-img text-center gap-4 w-100">
+      <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
         {datas.map((e, i) => {
           if (i < 3) {
             return (
@@ -49,7 +49,7 @@ const Experts = () => {
                   transition: "height 0.3s ease",
                 }}
                 onClick={() =>
-                  navigate("/experts-detail", {
+                  navigate(`/experts-detail/${e?.id}`, {
                     state: { expertsId: e?.id, currTypdetail: "partner" },
                   })
                 }
@@ -71,8 +71,8 @@ const Experts = () => {
                   />
                 </div>
                 <div
-                  className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 "
-                  style={{ zIndex: 999, height: 290 }}
+                  className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-detail-name-each"
+                  style={{ zIndex: 999 }}
                 >
                   <span
                     style={{

@@ -128,7 +128,7 @@ const ExpertsDetail = () => {
             </Button>
           );
         })}
-      </div>{" "}
+      </div>
       <div
         className="d-flex flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img"
         style={{ overflow: "scroll" }}
@@ -144,7 +144,7 @@ const ExpertsDetail = () => {
                 transition: "height 0.3s ease",
               }}
               onClick={() =>
-                navigate("/experts-detail", {
+                navigate(`/experts-detail/${e?.id}`, {
                   state: { expertsId: e?.id, currTypdetail: currType },
                 })
               }
