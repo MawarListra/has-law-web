@@ -148,8 +148,8 @@ const ExpertsDetail = () => {
                   state: { expertsId: e?.id, currTypdetail: currType },
                 })
               }
-              onMouseOver={(e) => (e.currentTarget.style.height = "320px")} // Change height on hover
-              onMouseOut={(e) => (e.currentTarget.style.height = "290px")} // Revert height on mouse out
+              onMouseOver={(e) => (e.currentTarget.style.height = "450px")} // Change height on hover
+              onMouseOut={(e) => (e.currentTarget.style.height = "423px")} // Revert height on mouse out
             >
               <div
                 className="d-flex w-100"

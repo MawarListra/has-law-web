@@ -30,45 +30,48 @@ const Services = ({ id }) => {
   }, []);
 
   return (
-    <div
-      className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4"
-      id={id}
-    >
-      <div className="d-flex justify-content-center align-items-center w-100 px-md-4 px-0 mx-auto">
-        <span className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0">
-          Hartamulya & team is a full-service law firm for individuals,
-          businesses, and organizations, offering diverse legal expertise.
-        </span>
-      </div>
-      <div className="d-flex flex-md-row flex-column justify-content-between align-items-start gap-md-5 gap-2 mx-auto">
-        {datas.map((e, i) => {
-          if (i < 2) {
-            return (
-              <div className="d-flex flex-column gap-2 services-section-data">
-                <div
-                  className="d-flex w-full border-bottom pb-2"
-                  style={{ height: 290 }}
-                >
-                  <img
-                    className="img-fluid"
-                    src={baseUrl + e?.image?.[0]?.image}
-                  />
+    <div className="w-100" id={id}>
+      <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+        <div
+          className="d-flex justify-content-center align-items-center px-md-4 px-0 mx-auto"
+          style={{ maxWidth: 822 }}
+        >
+          <span className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0">
+            Hartamulya & team is a full-service law firm for individuals,
+            businesses, and organizations, offering diverse legal expertise.
+          </span>
+        </div>
+        <div className="d-flex flex-md-row flex-column justify-content-between align-items-start gap-md-5 gap-2 mx-auto">
+          {datas.map((e, i) => {
+            if (i < 2) {
+              return (
+                <div className="d-flex flex-column gap-2 services-section-data">
+                  <div className="d-flex w-full border-bottom pb-2">
+                    <img
+                      className="img-fluid"
+                      src={baseUrl + e?.image?.[0]?.image}
+                    />
+                  </div>
+                  <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">
+                    <span className="text-title-services">{e?.name}</span>
+                    <ArrowRight
+                      onClick={() =>
+                        navigate(`/services-detail/${e?.id}`, {
+                          state: { servicesId: e?.id },
+                        })
+                      }
+                      style={{
+                        strokeWidth: 1,
+                        color: "#F00",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">
-                  <span className="text-title-services">{e?.name}</span>
-                  <ArrowRight
-                    onClick={() =>
-                      navigate(`/services-detail/${e?.id}`, {
-                        state: { servicesId: e?.id },
-                      })
-                    }
-                    style={{ strokeWidth: 1, color: "#F00", cursor: "pointer" }}
-                  />
-                </div>
-              </div>
-            );
-          }
-        })}
+              );
+            }
+          })}
+        </div>
       </div>
     </div>
   );

@@ -33,103 +33,105 @@ const Experts = () => {
   }, []);
 
   return (
-    <div className="container-fluid d-flex flex-column justify-content-between align-items-start experts-section gap-4 py-4">
-      <div className="d-flex justify-content-center align-items-center w-100 pb-4">
-        <span className="pro-bono-title">Meet Our Experts</span>
-      </div>
-      <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
-        {datas.map((e, i) => {
-          if (i < 3) {
-            return (
-              <div
-                className="d-flex flex-column gap-2 experts-section-img-each"
-                style={{
-                  position: "relative",
-                  cursor: "pointer",
-                  transition: "height 0.3s ease",
-                }}
-                onClick={() =>
-                  navigate(`/experts-detail/${e?.id}`, {
-                    state: { expertsId: e?.id, currTypdetail: "partner" },
-                  })
-                }
-                onMouseOver={(e) => (e.currentTarget.style.height = "452px")} // Change height on hover
-                onMouseOut={(e) => (e.currentTarget.style.height = "419px")} // Revert height on mouse out
-              >
+    <div className="w-100 experts-section">
+      <div className="container-fluid d-flex flex-column justify-content-between align-items-start gap-4 py-4">
+        <div className="d-flex justify-content-center align-items-center w-100 pb-4">
+          <span className="pro-bono-title">Meet Our Experts</span>
+        </div>
+        <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
+          {datas.map((e, i) => {
+            if (i < 3) {
+              return (
                 <div
-                  className="d-flex w-100"
+                  className="d-flex flex-column gap-2 experts-section-img-each"
                   style={{
-                    height: "100%",
-                    position: "absolute",
+                    position: "relative",
+                    cursor: "pointer",
+                    transition: "height 0.3s ease",
                   }}
+                  onClick={() =>
+                    navigate(`/experts-detail/${e?.id}`, {
+                      state: { expertsId: e?.id, currTypdetail: "partner" },
+                    })
+                  }
+                  onMouseOver={(e) => (e.currentTarget.style.height = "452px")} // Change height on hover
+                  onMouseOut={(e) => (e.currentTarget.style.height = "419px")} // Revert height on mouse out
                 >
-                  <img
-                    className="d-flex img-fluid"
-                    src={baseUrl + e?.image}
-                    style={{ width: "100%" }}
-                    alt="Image"
-                  />
-                </div>
-                <div
-                  className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-name-each"
-                  style={{ zIndex: 999 }}
-                >
-                  <span
+                  <div
+                    className="d-flex w-100"
                     style={{
-                      color: "#FFF",
-                      fontFamily: "Playfair Display",
-                      fontSize: "14px",
-                      fontStyle: "normal",
-                      fontWeight: 700,
-                      lineHeight: "normal",
-                      letterSpacing: "0.5px",
-                      wordBreak: "break-word",
+                      height: "100%",
+                      position: "absolute",
                     }}
                   >
-                    {e?.name}
-                  </span>
-                  <span
-                    style={{
-                      color: "#FFF",
-                      fontFamily: "Montserrat",
-                      fontSize: "12px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "normal",
-                      letterSpacing: "0.5px",
-                    }}
+                    <img
+                      className="d-flex img-fluid"
+                      src={baseUrl + e?.image}
+                      style={{ width: "100%" }}
+                      alt="Image"
+                    />
+                  </div>
+                  <div
+                    className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-name-each"
+                    style={{ zIndex: 999 }}
                   >
-                    PARTNER
-                  </span>
+                    <span
+                      style={{
+                        color: "#FFF",
+                        fontFamily: "Playfair Display",
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: 700,
+                        lineHeight: "normal",
+                        letterSpacing: "0.5px",
+                        wordBreak: "break-word",
+                      }}
+                    >
+                      {e?.name}
+                    </span>
+                    <span
+                      style={{
+                        color: "#FFF",
+                        fontFamily: "Montserrat",
+                        fontSize: "12px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      PARTNER
+                    </span>
+                  </div>
                 </div>
-              </div>
-            );
-          }
-        })}
-      </div>
-      <div className="d-flex w-100 justify-content-center align-items-center">
-        <Button
-          style={{
-            color: "#F00",
-            borderColor: "#F00",
-            backgroundColor: "transparent",
-          }}
-          outline
-        >
-          <span
+              );
+            }
+          })}
+        </div>
+        <div className="d-flex w-100 justify-content-center align-items-center">
+          <Button
             style={{
               color: "#F00",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 700,
-              lineHeight: "18px",
-              fontFamily: "Playfair Display",
+              borderColor: "#F00",
+              backgroundColor: "transparent",
             }}
-            onClick={() => navigate("/experts")}
+            outline
           >
-            See More
-          </span>
-        </Button>
+            <span
+              style={{
+                color: "#F00",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "18px",
+                fontFamily: "Playfair Display",
+              }}
+              onClick={() => navigate("/experts")}
+            >
+              See More
+            </span>
+          </Button>
+        </div>
       </div>
     </div>
   );

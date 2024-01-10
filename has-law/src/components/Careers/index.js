@@ -29,11 +29,11 @@ const Careers = () => {
         </span>
       </div>
       <div
-        className="d-md-flex d-none flex-row justify-content-center align-items-center w-100 mx-auto gap-3"
-        style={{ height: 343 }}
+        className="d-md-flex d-none flex-row justify-content-center align-items-center w-auto mx-auto gap-3"
+        style={{ height: 343, flexShrink: 0 }}
       >
-        <div className="d-flex w-50 justify-content-center align-items-center">
-          <img className="d-flex img-fluid" src={imgHas} />
+        <div className="d-flex w-50">
+          <img className="d-flex img-fluid w-auto h-auto" src={imgHas} />
         </div>
         <div className="d-flex flex-column justify-content-between gap-3">
           <div className="d-flex flex-row gap-3">
@@ -65,7 +65,7 @@ const Careers = () => {
         </div>
       </div>
       <div className="d-flex justify-content-center align-items-center w-100">
-        <div className="d-flex w-md-50 w-100">
+        <div className="d-flex" style={{ maxWidth: 714 }}>
           <span className="pro-bono-subtitle text-center">
             <span
               style={{

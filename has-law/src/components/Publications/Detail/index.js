@@ -39,10 +39,10 @@ const PublicationsDetail = () => {
       <div className="d-flex justify-content-center align-items-center w-100">
         <span className="pro-bono-title">Publications</span>
       </div>
+
       <div className="d-flex flex-column gap-3 w-100">
-        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-3 mx-auto">
+        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto">
           {displayedData?.map((e, i) => {
-            console.log("cek e", e);
             return (
               <div className="d-flex flex-column gap-2 publication-part">
                 <div

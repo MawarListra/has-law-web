@@ -37,13 +37,6 @@
   }
 }
 
-.container-fluid {
-  max-width: 1400px;
-  margin-right: auto;
-  margin-left: auto;
-  min-width: auto;
-}
-
 .active-menu-item {
   color: #ff0000; /* Change this to your desired text color */
   font-weight: 700;
@@ -64,6 +57,12 @@
 }
 
 @media (min-width: 768px) {
+  .container-fluid {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: auto;
+  }
   .paddingComponentRight {
     padding-right: 52px;
   }
@@ -136,10 +135,12 @@
     width: "33%";
   }
   .publication-part {
-    width: 45%;
+    width: 571.002px;
   }
   .publication-img {
-    height: 290;
+    width: 571.002px;
+    height: 310px;
+    flex-shrink: 0;
   }
   .publication-date {
     color: #515a5f;
@@ -246,16 +247,27 @@
     width: 321px;
   }
   .experts-section-detail-img-each {
-    width: 25%;
+    width: 278px;
+    height: 423px;
+    flex-shrink: 0;
+  }
+  .experts-section-detail-desc-div {
+    width: 464px;
   }
   .experts-section-detail-name-each {
-    height: 290px;
+    height: 423px;
   }
   .experts-section-detail-img {
-    height: 300px;
+    height: 450px;
+    flex-shrink: 0;
   }
   .services-section-data {
-    width: 50%;
+    width: 560px;
+  }
+  .services-section-data-img {
+    width: 560px;
+    height: 290px;
+    flex-shrink: 0;
   }
   .services-section-detail-bottom {
     padding-left: 148px;
@@ -282,6 +294,11 @@
     height: 100vh;
     top: 0;
     position: relative;
+  }
+  .about-text {
+    width: 560px;
+    height: 162px;
+    flex-shrink: 0;
   }
 }
 
@@ -365,7 +382,7 @@
     width: 100%;
   }
   .publication-img {
-    height: 178;
+    height: 178px;
   }
   .publication-date {
     color: var(--Gray, #515a5f);
@@ -487,6 +504,11 @@
   .services-section-data {
     width: 100%;
   }
+  .services-section-data-img {
+    width: 100%;
+    height: 178px;
+    flex-shrink: 0;
+  }
   .services-section-detail-bottom {
     padding-left: 0px;
     padding-right: 0px;
@@ -510,5 +532,12 @@
     width: 48px;
     height: 45px;
     flex-shrink: 0;
+  }
+
+  .experts-section-detail-desc-div {
+    width: 100%;
+  }
+  .about-text {
+    width: 100%;
   }
 }

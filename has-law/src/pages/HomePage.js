@@ -161,7 +161,7 @@ const Homepage = () => {
 
   return (
     <div
-      className={`d-flex w-100 flex-column bg-white px-3 px-md-0 ${
+      className={`d-flex w-100 flex-column bg-white ${
         location?.pathname !== "/" ? "container-fluid" : ""
       }`}
       style={{ position: "relative", overflowX: "hidden" }}
