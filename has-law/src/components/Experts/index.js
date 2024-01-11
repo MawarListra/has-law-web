@@ -47,15 +47,21 @@ const Experts = () => {
                   style={{
                     position: "relative",
                     cursor: "pointer",
-                    transition: "height 0.3s ease",
+                    transition: "height 0.3s ease,width 0.3s",
                   }}
                   onClick={() =>
                     navigate(`/experts-detail/${e?.id}`, {
                       state: { expertsId: e?.id, currTypdetail: "partner" },
                     })
                   }
-                  onMouseOver={(e) => (e.currentTarget.style.height = "452px")} // Change height on hover
-                  onMouseOut={(e) => (e.currentTarget.style.height = "419px")} // Revert height on mouse out
+                  onMouseOver={(e) => (
+                    (e.currentTarget.style.height = "452px"),
+                    (e.currentTarget.style.width = "346px")
+                  )} // Change height on hover
+                  onMouseOut={(e) => (
+                    (e.currentTarget.style.height = "423px"),
+                    (e.currentTarget.style.width = "321px")
+                  )} // Revert height on mouse out
                 >
                   <div
                     className="d-flex w-100"

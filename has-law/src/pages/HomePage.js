@@ -175,11 +175,11 @@ const Homepage = () => {
         />
       )}
       {renderContent}
-      {location?.pathname !== "/" && (
-        <div className="d-flex p-2 ic-whatsapp">
-          <img className="d-flex w-auto" src={IcWA} />
-        </div>
-      )}
+      {/* {location?.pathname !== "/" && ( */}
+      <div className="d-flex p-2 ic-whatsapp">
+        <img className="d-flex w-auto" src={IcWA} />
+      </div>
+      {/* )} */}
       <Footer />
     </div>
   );

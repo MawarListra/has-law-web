@@ -129,10 +129,7 @@ const ExpertsDetail = () => {
           );
         })}
       </div>
-      <div
-        className="d-flex flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img"
-        style={{ overflow: "scroll" }}
-      >
+      <div className="d-flex flex-wrap flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img">
         {datas.map((e, i) => {
           return (
             <div
@@ -141,15 +138,21 @@ const ExpertsDetail = () => {
                 // width: "auto",
                 position: "relative",
                 cursor: "pointer",
-                transition: "height 0.3s ease",
+                transition: "height 0.3s ease,width 0.3s ease",
               }}
               onClick={() =>
                 navigate(`/experts-detail/${e?.id}`, {
                   state: { expertsId: e?.id, currTypdetail: currType },
                 })
               }
-              onMouseOver={(e) => (e.currentTarget.style.height = "450px")} // Change height on hover
-              onMouseOut={(e) => (e.currentTarget.style.height = "423px")} // Revert height on mouse out
+              onMouseOver={(e) => (
+                (e.currentTarget.style.height = "450px"),
+                (e.currentTarget.style.width = "346px")
+              )} // Change height on hover
+              onMouseOut={(e) => (
+                (e.currentTarget.style.height = "423px"),
+                (e.currentTarget.style.width = "321px")
+              )} // Revert height on mouse out
             >
               <div
                 className="d-flex w-100"
@@ -163,7 +166,7 @@ const ExpertsDetail = () => {
                 />
               </div>
               <div
-                className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-detail-name-each"
+                className="d-flex flex-column justify-content-end align-items-center w-100 position-sticky bottom-0 py-2 experts-section-detail-name-each px-2"
                 style={{ zIndex: 999 }}
               >
                 <span

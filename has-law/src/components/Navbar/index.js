@@ -8,12 +8,20 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [currPath, setCurrPath] = useState("/");
-  const [currIdx, setCurrIdx] = useState(0);
+  const [currIdx, setCurrIdx] = useState(5);
 
   useEffect(() => {
     let str = location.pathname.split("-");
-    console.log("cek str", str);
-    if (str.includes(currPath) && location?.pathname !== "/") {
+    console.log("cek str navbar", str, currPath, currIdx);
+    if (currIdx === 5) {
+      var menuItems = document.querySelectorAll(
+        "#container-button-menu div button span"
+      );
+      menuItems.forEach(function (item) {
+        item.classList.remove("active-menu-item");
+        item.classList.add("text-secondary");
+      });
+    } else if (str.includes(currPath)) {
       var menuItems = document.querySelectorAll(
         "#container-button-menu div button span"
       );
@@ -25,7 +33,7 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
       element.classList.remove("text-secondary");
       element.classList.add("active-menu-item");
     }
-  }, [currPath]);
+  }, [currPath, location?.pathname, currIdx]);
 
   return (
     <nav className={`${location?.pathname === "/" ? "fixed-top" : ""}`}>
@@ -43,7 +51,10 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
             <img
               src={Logo}
               alt="logo"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setCurrIdx(5);
+              }}
               style={{ cursor: "pointer" }}
               className="d-flex img-fluid"
             />

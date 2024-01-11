@@ -197,7 +197,8 @@
     flex-shrink: 0;
   }
   .ic-whatsapp {
-    width: fit-content;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -236,7 +237,7 @@
     background-color: #f4f4f4;
   }
   .experts-section-img {
-    height: 419px;
+    height: 423px;
   }
   .experts-section-img-each {
     height: 419px;
@@ -258,7 +259,7 @@
     height: 423px;
   }
   .experts-section-detail-img {
-    height: 450px;
+    height: 100vh;
     flex-shrink: 0;
   }
   .services-section-data {
@@ -439,13 +440,14 @@
     flex-shrink: 0;
   }
   .ic-whatsapp {
-    width: fit-content;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     z-index: 999;
     right: 16px;
-    top: 671px;
+    top: 60vh;
     background-color: white;
     cursor: pointer;
   }
