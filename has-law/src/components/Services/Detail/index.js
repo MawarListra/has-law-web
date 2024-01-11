@@ -113,7 +113,7 @@ const ServicesDetail = () => {
         </div>
       </div>
       <div
-        className="d-flex flex-row justify-content-between align-items-start gap-2 mt-2 py-2"
+        className="d-flex flex-row justify-content-between align-items-start gap-2 mt-4 py-2"
         style={{
           overflowX: "auto",
           maxWidth: "100%",

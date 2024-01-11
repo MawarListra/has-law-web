@@ -33,7 +33,7 @@ const Services = ({ id }) => {
     <div className="w-100" id={id}>
       <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
         <div
-          className="d-flex justify-content-center align-items-center px-md-4 px-0 mx-auto"
+          className="d-flex justify-content-center align-items-center px-md-4 px-0 mx-auto pb-4"
           style={{ maxWidth: 822 }}
         >
           <span className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0">

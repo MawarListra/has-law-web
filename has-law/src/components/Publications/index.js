@@ -39,7 +39,7 @@ const Publications = () => {
   return (
     <div className="w-100">
       <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-        <div className="d-flex justify-content-center align-items-center w-100">
+        <div className="d-flex justify-content-center align-items-center w-100 pb-4">
           <span className="pro-bono-title">Publications</span>
         </div>
         <div className="d-flex flex-column gap-3 w-100">
