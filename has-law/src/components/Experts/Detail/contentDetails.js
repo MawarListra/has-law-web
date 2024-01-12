@@ -38,17 +38,17 @@ const ContentExpertsDetail = () => {
       <div className="d-flex justify-content-center align-items-center w-100">
         <span className="pro-bono-title">Meet Our Experts</span>
       </div>
-      <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-4 gap-2 w-md-50 w-100">
-        <div className="d-flex flex-column justify-content-md-start justify-content-center experts-section-detail-img-each">
-          <div className="d-flex experts-section-detail-img">
+      <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-2 gap-2 w-md-50 w-100">
+        <div className="d-flex flex-column justify-content-md-start justify-content-center ">
+          <div className="d-flex experts-section-detail-img-each justify-content-md-start justify-content-center">
             <img
-              className="img-fluid"
+              className="d-flex img-fluid"
               src={baseUrl + detail?.image}
               // style={{ width: "100%" }}
               alt="Image"
             />
           </div>
-          <div className="d-flex flex-column ">
+          <div className="d-flex flex-column justify-content-md-start justify-content-center px-md-0 px-4">
             <span
               className="text-left"
               style={{
