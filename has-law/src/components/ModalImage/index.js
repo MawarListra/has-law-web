@@ -8,13 +8,13 @@ const ModalImage = ({ open, toggle, data }) => {
       <ModalHeader
         className="d-flex w-100 justify-content-end align-items-end"
         style={{
-          backgroundColor: "#18181C",
+          backgroundColor: "#fff",
         }}
       >
         <div>
           <X
             style={{ cursor: "pointer" }}
-            color="white"
+            color="red"
             size={24}
             onClick={() => toggle()}
           />
@@ -23,7 +23,9 @@ const ModalImage = ({ open, toggle, data }) => {
       <ModalBody
         className="d-flex flex-column p-3 gap-3"
         style={{
-          backgroundColor: "#18181C",
+          backgroundColor: "#fff",
+          borderEndEndRadius: 25,
+          borderEndStartRadius: 25,
         }}
       >
         <div className="d-flex justify-content-center align-items-center">
