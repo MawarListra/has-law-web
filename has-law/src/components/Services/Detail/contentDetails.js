@@ -8,6 +8,7 @@ const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const ContentServicesDetail = () => {
   const [detail, setDetail] = useState([]);
+  const [otherDetail, setOtherDetail] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
@@ -29,8 +30,28 @@ const ContentServicesDetail = () => {
     }
   };
 
+  const getOtherDetail = async () => {
+    try {
+      const resp = await axios.get(
+        `${baseUrl}v1/main_services/getdetail/${parseInt(id) === 1 ? 2 : 1}`
+      );
+      if (resp?.status === 200 && resp?.data?.status === "success") {
+        console.log("cek resp", resp);
+        setOtherDetail({
+          data: resp?.data?.data,
+          services: resp?.data?.services,
+        });
+      } else {
+        toast.error("Gagal mendapatkan data. Silahkan reload page");
+      }
+    } catch (e) {
+      console.log("cek err", e);
+    }
+  };
+
   useEffect(() => {
     getDetail();
+    getOtherDetail();
   }, [id]);
 
   return (
@@ -71,7 +92,7 @@ const ContentServicesDetail = () => {
               <img
                 className="d-flex"
                 style={{ width: "auto", maxWidth: "100%" }}
-                src={baseUrl + detail?.data?.image?.[0]?.image}
+                src={baseUrl + otherDetail?.data?.image?.[0]?.image}
               />
             </div>
             <div className="d-flex flex-row gap-2">
@@ -79,23 +100,25 @@ const ContentServicesDetail = () => {
                 <img
                   className="d-flex"
                   style={{ width: "auto", maxWidth: "100%" }}
-                  src={baseUrl + detail?.data?.image?.[1]?.image}
+                  src={baseUrl + otherDetail?.data?.image?.[1]?.image}
                 />
               </div>
               <div className="d-flex w-50">
                 <img
                   className="d-flex"
                   style={{ width: "auto", maxWidth: "100%" }}
-                  src={baseUrl + detail?.data?.image?.[2]?.image}
+                  src={baseUrl + otherDetail?.data?.image?.[2]?.image}
                 />
               </div>
             </div>
           </div>
           <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">
-            <span className="text-title-services">{detail?.data?.name}</span>
+            <span className="text-title-services">
+              {otherDetail?.data?.name}
+            </span>
             <ArrowRight
               onClick={() =>
-                navigate(`/services-detail/${detail?.data?.id}`, {
+                navigate(`/services-detail/${parseInt(id) === 1 ? 2 : 1}`, {
                   state: {
                     servicesId: detail?.data?.id,
                   },
