@@ -64,12 +64,9 @@ const ServicesDetail = () => {
           {datas.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2">
-                <div
-                  className="d-flex w-full border-bottom pb-2"
-                  style={{ height: 290 }}
-                >
+                <div className="d-flex w-full border-bottom pb-2 services-detail-img">
                   <img
-                    className="img-fluid"
+                    className="d-flex img-fluid"
                     src={baseUrl + e?.image?.[0]?.image}
                   />
                 </div>

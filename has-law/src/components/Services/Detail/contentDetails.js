@@ -95,7 +95,7 @@ const ContentServicesDetail = () => {
             <span className="text-title-services">{detail?.data?.name}</span>
             <ArrowRight
               onClick={() =>
-                navigate("/services-detail", {
+                navigate(`/services-detail/${detail?.data?.id}`, {
                   state: {
                     servicesId: detail?.data?.id,
                   },

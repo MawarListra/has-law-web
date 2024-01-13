@@ -318,6 +318,9 @@
     width: 221px;
     height: 172px;
   }
+  .services-detail-img {
+    height: 290px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -576,5 +579,9 @@
   .container-achievment-img {
     width: 221px;
     height: 172px;
+  }
+  .services-detail-img {
+    height: auto;
+    max-height: 290px;
   }
 }
