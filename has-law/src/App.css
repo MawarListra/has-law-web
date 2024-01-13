@@ -259,8 +259,7 @@
     height: 423px;
   }
   .experts-section-detail-img {
-    height: 100vh;
-    flex-shrink: 0;
+    height: auto;
   }
   .services-section-data {
     width: 560px;

@@ -129,7 +129,7 @@ const ExpertsDetail = () => {
           );
         })}
       </div>
-      <div className="d-flex flex-wrap flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img">
+      <div className="d-flex flex-wrap flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img py-4">
         {datas.map((e, i) => {
           return (
             <div
