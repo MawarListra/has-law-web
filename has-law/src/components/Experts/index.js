@@ -13,6 +13,7 @@ const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 const Experts = () => {
   const navigate = useNavigate();
   const [datas, setDatas] = useState([]);
+  const [mouseHover, setMouseHover] = useState(false);
   const getDatas = async () => {
     try {
       const resp = await axios.get(
@@ -35,7 +36,11 @@ const Experts = () => {
   return (
     <div className="w-100 experts-section">
       <div className="container-fluid d-flex flex-column justify-content-between align-items-start gap-4 py-4">
-        <div className="d-flex justify-content-center align-items-center w-100 pb-4">
+        <div
+          className={`d-flex justify-content-center align-items-center w-100 ${
+            mouseHover ? "pb-4" : "pb-0"
+          }`}
+        >
           <span className="pro-bono-title">Meet Our Experts</span>
         </div>
         <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
@@ -56,11 +61,13 @@ const Experts = () => {
                   }
                   onMouseOver={(e) => (
                     (e.currentTarget.style.height = "452px"),
-                    (e.currentTarget.style.width = "346px")
+                    (e.currentTarget.style.width = "346px"),
+                    setMouseHover(true)
                   )} // Change height on hover
                   onMouseOut={(e) => (
                     (e.currentTarget.style.height = "423px"),
-                    (e.currentTarget.style.width = "321px")
+                    (e.currentTarget.style.width = "321px"),
+                    setMouseHover(false)
                   )} // Revert height on mouse out
                 >
                   <div

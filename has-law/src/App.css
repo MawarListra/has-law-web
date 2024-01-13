@@ -314,6 +314,10 @@
     height: 162px;
     flex-shrink: 0;
   }
+  .container-achievment-img {
+    width: 221px;
+    height: 172px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -568,5 +572,9 @@
   }
   .about-text {
     width: 100%;
+  }
+  .container-achievment-img {
+    width: 221px;
+    height: 172px;
   }
 }

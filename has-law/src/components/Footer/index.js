@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "reactstrap";
 import logoFooter from "../../assets/logoFooter.png";
 import { useNavigate } from "react-router-dom";
 import { Instagram, Linkedin } from "react-feather";
-import Ic1 from "../../assets/achievment1.png";
-import Ic2 from "../../assets/achievment2.png";
-import Ic3 from "../../assets/achievment3.png";
+import Ic1 from "../../assets/achievment1.jpeg";
+import Ic2 from "../../assets/achievment2.jpg";
+import Ic3 from "../../assets/achievment3.jpeg";
 import Ic4 from "../../assets/achievment4.png";
+import { ModalImage } from "..";
 
 const Footer = ({}) => {
   const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(false);
+  const [currImg, setCurrImg] = useState("");
   return (
     <div className="w-100">
       <div className="container-fluid d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
@@ -29,21 +32,49 @@ const Footer = ({}) => {
             >
               Achievements
             </span>
-            <div className="d-flex flex-column gap-2">
+            <div className="d-flex flex-column gap-2 container-achievment-img">
               <div className="d-flex flex-row gap-2">
-                <div className="d-flex w-50">
-                  <img src={Ic1} />
+                <div
+                  className="d-flex w-50"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setOpenModal(!openModal);
+                    setCurrImg(Ic1);
+                  }}
+                >
+                  <img className="d-flex img-fluid" src={Ic1} />
                 </div>
-                <div className="d-flex w-50">
-                  <img src={Ic2} />
+                <div
+                  className="d-flex w-50"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setOpenModal(!openModal);
+                    setCurrImg(Ic2);
+                  }}
+                >
+                  <img className="d-flex img-fluid" src={Ic2} />
                 </div>
               </div>
               <div className="d-flex flex-row gap-2">
-                <div className="d-flex w-50">
-                  <img src={Ic3} />
+                <div
+                  className="d-flex w-50"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setOpenModal(!openModal);
+                    setCurrImg(Ic3);
+                  }}
+                >
+                  <img className="d-flex img-fluid" src={Ic3} />
                 </div>
-                <div className="d-flex w-50">
-                  <img src={Ic4} />
+                <div
+                  className="d-flex w-50"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setOpenModal(!openModal);
+                    setCurrImg(Ic4);
+                  }}
+                >
+                  <img className="d-flex img-fluid" src={Ic4} />
                 </div>
               </div>
             </div>
@@ -123,6 +154,12 @@ const Footer = ({}) => {
           </div>
         </div>
       </div>
+      <ModalImage
+        open={openModal}
+        toggle={() => setOpenModal(!openModal)}
+        data={currImg}
+        size="md"
+      />
     </div>
   );
 };
