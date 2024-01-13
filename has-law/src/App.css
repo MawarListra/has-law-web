@@ -56,23 +56,21 @@
   display: block; /* Show the overlay when it has the 'active' class */
 }
 
-.scrolling-container {
-  width: 100%;
-  position: relative;
-  white-space: nowrap;
-  animation: scroll 20s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-65%);
-  }
-}
-
 @media (min-width: 768px) {
+  .scrolling-container {
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-65%);
+    }
+  }
   .container-fluid {
     max-width: 1400px;
     margin-right: auto;
@@ -319,6 +317,20 @@
 }
 
 @media (max-width: 768px) {
+  .scrolling-container {
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-500%);
+    }
+  }
   .paddingComponentRight {
     padding-right: 0px;
   }
