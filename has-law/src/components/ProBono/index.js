@@ -13,9 +13,9 @@ const ProBono = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-md-none d-flex w-100">
-        <img className="d-flex w-100" src={imgProBono} />
+    <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+      <div className="d-md-none d-flex w-100 justify-content-evenly">
+        <img className="d-flex" src={imgProBono} />
       </div>
       <div className="d-flex justify-content-center align-items-center w-md-75 w-100 px-md-4 px-0 mx-auto ">
         <span className="pro-bono-title text-center px-md-4 px-0 mx-md-4 mx-auto">

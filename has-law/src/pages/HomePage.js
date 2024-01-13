@@ -176,7 +176,15 @@ const Homepage = () => {
       )}
       {renderContent}
       {/* {location?.pathname !== "/" && ( */}
-      <div className="d-flex p-2 ic-whatsapp">
+      <div
+        className="d-flex p-2 ic-whatsapp"
+        onClick={() =>
+          window.open(
+            "https://api.whatsapp.com/send?phone=+6281289727869&text=Halo%!",
+            "_blank"
+          )
+        }
+      >
         <img className="d-flex w-auto" src={IcWA} />
       </div>
       {/* )} */}

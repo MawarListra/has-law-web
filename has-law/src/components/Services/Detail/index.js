@@ -99,7 +99,7 @@ const ServicesDetail = () => {
             across diverse sectors.
           </span>
         </div>
-        <div className="d-md-flex d-none flex-row justify-content-between align-items-end gap-4">
+        {/* <div className="d-md-flex d-none flex-row justify-content-between align-items-end gap-4">
           <ArrowLeftCircle
             style={{ strokeWidth: 1, cursor: "pointer" }}
             color="red"
@@ -110,22 +110,18 @@ const ServicesDetail = () => {
             color="red"
             size={32}
           />
-        </div>
+        </div> */}
       </div>
       <div
-        className="d-flex flex-row justify-content-between align-items-start gap-2 mt-4 py-2"
+        className="d-flex flex-row justify-content-between align-items-start gap-2 mt-4 py-2 scrolling-container"
         style={{
-          overflowX: "auto",
           maxWidth: "100%",
         }}
       >
         {services.map((e, i) => {
           return (
             <div className="d-flex flex-column gap-2">
-              <div
-                className="d-flex w-full pb-2"
-                style={{ width: "auto", maxWidth: "100%" }}
-              >
+              <div className="d-flex w-full pb-2" style={{ width: "auto" }}>
                 <img className="d-flex " src={baseUrl + e?.image} />
               </div>
               <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">

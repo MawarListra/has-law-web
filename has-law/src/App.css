@@ -56,6 +56,22 @@
   display: block; /* Show the overlay when it has the 'active' class */
 }
 
+.scrolling-container {
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-65%);
+  }
+}
+
 @media (min-width: 768px) {
   .container-fluid {
     max-width: 1400px;
@@ -203,8 +219,8 @@
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
     position: fixed;
     z-index: 999;
-    right: 56px;
-    top: 70vh;
+    right: 30px;
+    top: 85vh;
     background-color: white;
     cursor: pointer;
   }
@@ -439,14 +455,14 @@
     flex-shrink: 0;
   }
   .ic-whatsapp {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
     position: fixed;
     z-index: 999;
     right: 16px;
-    top: 60vh;
+    top: 90vh;
     background-color: white;
     cursor: pointer;
   }
