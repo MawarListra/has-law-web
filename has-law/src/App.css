@@ -204,9 +204,9 @@
     position: fixed;
     z-index: 999;
     right: 56px;
-    top: 719px;
+    top: 70vh;
     background-color: white;
-    cursor: "pointer";
+    cursor: pointer;
   }
   .pro-bono-title {
     color: var(--Red, #f00);
