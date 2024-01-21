@@ -7,6 +7,7 @@ import image3 from "../../../assets/experts3.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { createMarkup } from "../../../utils/createMarkup";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
@@ -84,7 +85,8 @@ const ContentExpertsDetail = () => {
           className="d-flex experts-section-detail-desc-div justify-content-md-evenly text-md-justify text-left mt-md-0 mt-4"
           style={{ wordBreak: "break-word" }}
         >
-          <span
+          <div
+            className="d-flex flex-column"
             style={{
               color: "#515A5F",
               fontFamily: "Montserrat",
@@ -94,9 +96,8 @@ const ContentExpertsDetail = () => {
               lineHeight: "23px",
               letterSpacing: "0.5px",
             }}
-          >
-            {detail?.description}
-          </span>
+            dangerouslySetInnerHTML={createMarkup(detail?.description)}
+          ></div>
         </div>
       </div>
     </div>

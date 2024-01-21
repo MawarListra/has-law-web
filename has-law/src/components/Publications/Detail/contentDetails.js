@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
 import moment from "moment";
 import { Button } from "reactstrap";
+import { createMarkup } from "../../../utils/createMarkup";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
@@ -62,7 +63,8 @@ const ContentPublicationsDetail = () => {
             <img className="d-flex img-fluid" src={baseUrl + detail?.image} />
           </div>
           <div>
-            <span
+            <div
+              className="flex flex-column"
               style={{
                 color: "#292D32",
                 fontFamily: "Montserrat",
@@ -72,9 +74,8 @@ const ContentPublicationsDetail = () => {
                 lineHeight: "23px",
                 letterSpacing: "0.5px",
               }}
-            >
-              {detail?.description}
-            </span>
+              dangerouslySetInnerHTML={createMarkup(detail?.description)}
+            ></div>
           </div>
         </div>
         <div className="d-flex flex-column gap-2">

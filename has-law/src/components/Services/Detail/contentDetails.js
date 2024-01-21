@@ -3,6 +3,7 @@ import { ArrowRight } from "react-feather";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { createMarkup } from "../../../utils/createMarkup";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
@@ -69,7 +70,9 @@ const ContentServicesDetail = () => {
                 <span className="services-sectiont-detail-paragraph-title">
                   {e?.name}
                 </span>
-                <span
+
+                <div
+                  className="d-flex flex-column"
                   style={{
                     color: "#515A5F",
                     fontFamily: "Montserrat",
@@ -79,9 +82,8 @@ const ContentServicesDetail = () => {
                     lineHeight: "23px",
                     letterSpacing: "0.5px",
                   }}
-                >
-                  {e?.description}
-                </span>
+                  dangerouslySetInnerHTML={createMarkup(e?.description)}
+                ></div>
               </div>
             );
           })}
