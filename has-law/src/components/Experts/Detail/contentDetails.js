@@ -82,7 +82,7 @@ const ContentExpertsDetail = () => {
           </div>
         </div>
         <div
-          className="d-flex experts-section-detail-desc-div justify-content-md-evenly text-md-justify text-left mt-md-0 mt-4"
+          className="d-flex experts-section-detail-desc-div justify-content-md-start text-md-justify text-left mt-md-0 mt-4"
           style={{ wordBreak: "break-word" }}
         >
           <div
