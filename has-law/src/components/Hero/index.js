@@ -3,14 +3,23 @@ import { Button } from "reactstrap";
 import HeroIc from "../../assets/heroImage.png";
 import { useNavigate } from "react-router-dom";
 import { ArrowDownCircle } from "react-feather";
+import VideoHero from "../../assets/hero_video.mp4";
 
 const Hero = ({ id, scrollToDiv }) => {
   const navigate = useNavigate();
   return (
     <div className="hero-background" style={{}} id={id}>
+      <video className="d-md-flex d-none" id="heroVideo" autoPlay muted loop>
+        <source src={VideoHero} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
         <div className="d-flex d-md-none w-100">
-          <img src={HeroIc} className="d-flex img-fluid " alt="hero-ic" />
+          {/* <img src={HeroIc} className="d-flex img-fluid " alt="hero-ic" /> */}
+          <video id="heroVideo" autoPlay muted loop>
+            <source src={VideoHero} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="d-md-flex d-none justify-content-center align-items-center w-full">
           <ArrowDownCircle

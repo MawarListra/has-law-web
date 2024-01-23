@@ -98,20 +98,26 @@ const ContentServicesDetail = () => {
               />
             </div>
             <div className="d-flex flex-row gap-2">
-              <div className="d-flex w-50">
+              <div
+                className={`d-flex ${
+                  otherDetail?.data?.image?.[2]?.image ? "w-50" : "w-full"
+                }`}
+              >
                 <img
                   className="d-flex"
                   style={{ width: "auto", maxWidth: "100%" }}
                   src={baseUrl + otherDetail?.data?.image?.[1]?.image}
                 />
               </div>
-              <div className="d-flex w-50">
-                <img
-                  className="d-flex"
-                  style={{ width: "auto", maxWidth: "100%" }}
-                  src={baseUrl + otherDetail?.data?.image?.[2]?.image}
-                />
-              </div>
+              {otherDetail?.data?.image?.[2]?.image && (
+                <div className="d-flex w-50">
+                  <img
+                    className="d-flex"
+                    style={{ width: "auto", maxWidth: "100%" }}
+                    src={baseUrl + otherDetail?.data?.image?.[2]?.image}
+                  />
+                </div>
+              )}
             </div>
           </div>
           <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">
