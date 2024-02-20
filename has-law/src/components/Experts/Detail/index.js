@@ -206,6 +206,7 @@ const ExpertsDetail = () => {
                     fontWeight: 400,
                     lineHeight: "normal",
                     letterSpacing: "0.5px",
+                    textShadow: "3px 1px 5px rgba(0, 0, 0, 0.7)",
                   }}
                 >
                   {e?.categories?.toUpperCase()}
