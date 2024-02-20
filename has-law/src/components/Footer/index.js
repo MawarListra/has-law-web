@@ -21,7 +21,7 @@ const Footer = ({}) => {
             <span
               style={{
                 color: "#303030",
-                fontFamily: "Open Sans",
+                fontFamily: "Helvetica",
                 fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -83,7 +83,7 @@ const Footer = ({}) => {
             <span
               style={{
                 color: "#303030",
-                fontFamily: "Open Sans",
+                fontFamily: "Helvetica",
                 fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -103,7 +103,7 @@ const Footer = ({}) => {
             <span
               style={{
                 color: "#303030",
-                fontFamily: "Open Sans",
+                fontFamily: "Helvetica",
                 fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 700,

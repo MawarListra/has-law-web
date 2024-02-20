@@ -35,7 +35,7 @@ const ProBono = () => {
           <span
             style={{
               color: "#F00",
-              fontFamily: "Montserrat",
+              fontFamily: "Helvetica",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: 400,
@@ -51,7 +51,7 @@ const ProBono = () => {
           <span
             style={{
               color: "#292D32",
-              fontFamily: "Montserrat",
+              fontFamily: "Helvetica",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: 400,

@@ -56,6 +56,13 @@
   display: block; /* Show the overlay when it has the 'active' class */
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 200px; /* Adjust the max-width as needed */
+}
+
 @media (min-width: 768px) {
   .scrolling-container {
     width: 100%;
@@ -86,7 +93,7 @@
   .text-hero {
     color: var(--Gray-Second, #f8f8f8);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -97,7 +104,7 @@
     /* color: #515a5f; */
 
     /* Paragraph/Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -108,7 +115,7 @@
     color: var(--Gray, #515a5f);
 
     /* Paragraph/Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -119,7 +126,7 @@
     color: var(--Red, #f00);
 
     /* Heading/Heading 3 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -128,7 +135,7 @@
   }
   .text-title-services {
     color: var(--Black, #292d32);
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -169,7 +176,7 @@
     color: #515a5f;
 
     /* Paragraph/Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -181,7 +188,7 @@
     color: var(--Black, #292d32);
     text-overflow: ellipsis;
     /* white-space: nowrap; */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -192,7 +199,7 @@
     color: var(--Black, #292d32);
 
     /* Heading/Heading 2 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -207,7 +214,7 @@
     text-align: center;
 
     /* Heading/Heading 3 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -236,7 +243,7 @@
     text-align: center;
 
     /* Heading/Heading 3 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -247,7 +254,7 @@
     color: var(--Black, #292d32);
 
     /* Paragraph/Medium */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -300,7 +307,7 @@
     color: var(--Red, #f00);
 
     /* Heading/Heading 3 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -320,7 +327,7 @@
   }
   .about-text {
     width: 560px;
-    height: 162px;
+    /* height: 162px; */
     flex-shrink: 0;
   }
   .container-achievment-img {
@@ -329,6 +336,14 @@
   }
   .services-detail-img {
     height: 290px;
+  }
+  .image-service-scrolling {
+    width: 376px;
+    height: 251px;
+  }
+  .container-text-image-scrolling {
+    width: 376px;
+    word-wrap: break-word;
   }
 }
 
@@ -344,7 +359,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-500%);
+      transform: translateX(-400%);
     }
   }
   .paddingComponentRight {
@@ -356,7 +371,7 @@
   .text-hero {
     color: var(--Gray-Second, #f8f8f8);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -367,7 +382,7 @@
     /* color: #515a5f; */
 
     /* Paragraph/Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -378,7 +393,7 @@
     color: var(--Gray, #515a5f);
 
     /* Paragraph/Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -389,7 +404,7 @@
     color: var(--Red, #f00);
 
     /* Heading/Heading 3 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -398,7 +413,7 @@
   }
   .text-title-services {
     color: var(--Black, #292d32);
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -437,7 +452,7 @@
   .publication-date {
     color: var(--Gray, #515a5f);
     /* Paragraph/Extra Small */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -449,7 +464,7 @@
     color: var(--Black, #292d32);
     text-overflow: ellipsis;
     /* white-space: nowrap; */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -460,7 +475,7 @@
     color: var(--Black, #292d32);
 
     /* Heading/Heading 4 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -476,7 +491,7 @@
     text-align: center;
 
     /* Heading/Heading 4 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -505,7 +520,7 @@
     text-align: center;
 
     /* Heading/Heading 4 */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -516,7 +531,7 @@
     color: var(--Black, #292d32);
 
     /* Paragraph/Medium */
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -566,7 +581,7 @@
   }
   .services-sectiont-detail-paragraph-title {
     color: var(--Red, #f00);
-    font-family: Montserrat;
+    font-family: Helvetica;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -598,5 +613,13 @@
   .services-detail-img {
     height: auto;
     max-height: 290px;
+  }
+  .image-service-scrolling {
+    width: 231px;
+    height: 181px;
+  }
+  .container-text-image-scrolling {
+    width: 231px;
+    word-wrap: break-word;
   }
 }

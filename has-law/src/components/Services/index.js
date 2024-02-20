@@ -30,13 +30,16 @@ const Services = ({ id }) => {
   }, []);
 
   return (
-    <div className="w-100" id={id}>
+    <div className="w-100 bg-black" id={id}>
       <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
         <div
           className="d-flex justify-content-center align-items-center px-md-4 px-0 mx-auto"
           style={{ maxWidth: 822 }}
         >
-          <span className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0">
+          <span
+            className="pro-bono-title text-md-center text-left px-md-4 px-0 mx-md-4 mx-0"
+            style={{ color: "white" }}
+          >
             Hartamulya & team is a full-service law firm for individuals,
             businesses, and organizations, offering diverse legal expertise.
           </span>
@@ -53,7 +56,12 @@ const Services = ({ id }) => {
                     />
                   </div>
                   <div className="d-flex flex-row justify-content-between align-items-center w-100 mx-auto">
-                    <span className="text-title-services">{e?.name}</span>
+                    <span
+                      className="text-title-services"
+                      style={{ color: "white" }}
+                    >
+                      {e?.name}
+                    </span>
                     <ArrowRight
                       onClick={() =>
                         navigate(`/services-detail/${e?.id}`, {
@@ -62,7 +70,7 @@ const Services = ({ id }) => {
                       }
                       style={{
                         strokeWidth: 1,
-                        color: "#F00",
+                        color: "white",
                         cursor: "pointer",
                       }}
                     />

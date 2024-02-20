@@ -46,7 +46,9 @@ const Hero = ({ id, scrollToDiv }) => {
               padding: 32,
             }}
           >
-            <span className="text-hero">PERSERVERANCE LAWYERS</span>
+            <span className="text-hero" style={{ fontFamily: "Montserrat" }}>
+              PERSERVERANCE LAWYERS
+            </span>
           </div>
           <div
             className="d-flex justify-content-center align-items-center "

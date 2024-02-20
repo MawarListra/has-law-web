@@ -75,7 +75,7 @@ const ContentServicesDetail = () => {
                   className="d-flex flex-column"
                   style={{
                     color: "#515A5F",
-                    fontFamily: "Montserrat",
+                    fontFamily: "Helvetica",
                     fontSize: "14px",
                     fontStyle: "normal",
                     fontWeight: 400,
