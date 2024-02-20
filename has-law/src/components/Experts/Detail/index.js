@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "react-feather";
 import { Button } from "reactstrap";
 import image1 from "../../../assets/experts1.png";
@@ -11,8 +11,13 @@ import { useNavigate } from "react-router-dom";
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
 const ExpertsDetail = () => {
-  const [categories, setCategories] = useState([]);
-  const [currType, setCurrType] = useState("partners");
+  const [categories, setCategories] = useState([
+    {
+      id: "all",
+      name: "all",
+    },
+  ]);
+  const [currType, setCurrType] = useState("all");
   const [datas, setDatas] = useState([]);
   const navigate = useNavigate();
 
@@ -20,7 +25,7 @@ const ExpertsDetail = () => {
     try {
       const resp = await axios.get(`${baseUrl}v1/partner_categories/getall`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
-        setCategories(resp?.data?.data);
+        setCategories((prev) => [...prev, ...resp?.data?.data]);
       } else {
         console.error("Gagal mendapatkan data. Silahkan reload page");
       }
@@ -28,6 +33,10 @@ const ExpertsDetail = () => {
       console.log("cek err", e);
     }
   };
+
+  useEffect(() => {
+    console.log("cek categories", categories);
+  }, [categories]);
 
   const getDatas = useCallback(async () => {
     try {
@@ -44,6 +53,76 @@ const ExpertsDetail = () => {
     }
   }, [currType]);
 
+  const renderCategories = useMemo(() => {
+    return categories.map((e) => {
+      return (
+        <Button
+          style={
+            e?.name === currType
+              ? {
+                  backgroundColor: "#FF0000",
+                  display: "flex",
+                  width: "89px",
+                  height: "48px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "8px",
+                  flexShrink: 0,
+                  borderRadius: "5px",
+                  borderColor: "#FF0000",
+                }
+              : {
+                  display: "flex",
+                  width: "89px",
+                  height: "48px",
+                  padding: "8px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "8px",
+                  flexShrink: 0,
+                  borderRadius: "5px",
+                  backgroundColor: "transparent",
+                  border: "1px solid transparent",
+                }
+          }
+          key={e?.id}
+          onClick={() => {
+            setCurrType(e?.name);
+          }}
+        >
+          <span
+            style={
+              e?.name === currType
+                ? {
+                    color: "#FFF",
+                    fontFeatureSettings: "clig off liga off",
+                    fontFamily: "Nunito Sans",
+                    fontSize: 14,
+                    fontStyle: "normal",
+                    fontWeight: 700,
+                    lineHeight: "normal",
+                    letterSpacing: 0.5,
+                  }
+                : {
+                    color: "#FF0000",
+                    fontFeatureSettings: "clig off liga off",
+                    fontFamily: "Nunito Sans",
+                    fontSize: 14,
+                    fontStyle: "normal",
+                    fontWeight: 700,
+                    lineHeight: "normal",
+                    letterSpacing: 0.5,
+                  }
+            }
+          >
+            {e?.name === "all" ? "All" : e?.name}
+          </span>
+        </Button>
+      );
+    });
+  }, [categories, currType]);
+
   useEffect(() => {
     getCategories();
   }, []);
@@ -59,75 +138,9 @@ const ExpertsDetail = () => {
       </div>
       <div
         className="d-flex flex-row justify-content-center w-100"
-        style={{ gap: 10 }}
+        style={{ gap: 10, overflowX: "auto" }}
       >
-        {categories.map((e) => {
-          return (
-            <Button
-              style={
-                e?.name === currType
-                  ? {
-                      backgroundColor: "#FF0000",
-                      display: "flex",
-                      width: "89px",
-                      height: "48px",
-                      padding: "8px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      gap: "8px",
-                      flexShrink: 0,
-                      borderRadius: "5px",
-                      borderColor: "#FF0000",
-                    }
-                  : {
-                      display: "flex",
-                      width: "89px",
-                      height: "48px",
-                      padding: "8px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      gap: "8px",
-                      flexShrink: 0,
-                      borderRadius: "5px",
-                      backgroundColor: "transparent",
-                      border: "1px solid transparent",
-                    }
-              }
-              key={e?.id}
-              onClick={() => {
-                setCurrType(e?.name);
-              }}
-            >
-              <span
-                style={
-                  e?.name === currType
-                    ? {
-                        color: "#FFF",
-                        fontFeatureSettings: "clig off liga off",
-                        fontFamily: "Nunito Sans",
-                        fontSize: 14,
-                        fontStyle: "normal",
-                        fontWeight: 700,
-                        lineHeight: "normal",
-                        letterSpacing: 0.5,
-                      }
-                    : {
-                        color: "#FF0000",
-                        fontFeatureSettings: "clig off liga off",
-                        fontFamily: "Nunito Sans",
-                        fontSize: 14,
-                        fontStyle: "normal",
-                        fontWeight: 700,
-                        lineHeight: "normal",
-                        letterSpacing: 0.5,
-                      }
-                }
-              >
-                {e?.name}
-              </span>
-            </Button>
-          );
-        })}
+        {renderCategories}
       </div>
       <div className="d-flex flex-wrap flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img py-4">
         {datas.map((e, i) => {
@@ -179,6 +192,7 @@ const ExpertsDetail = () => {
                     lineHeight: "normal",
                     letterSpacing: "0.5px",
                     wordBreak: "break-word",
+                    textShadow: "3px 1px 5px rgba(0, 0, 0, 0.7)",
                   }}
                 >
                   {e?.name}
@@ -194,7 +208,7 @@ const ExpertsDetail = () => {
                     letterSpacing: "0.5px",
                   }}
                 >
-                  {currType?.toUpperCase()}
+                  {e?.categories?.toUpperCase()}
                 </span>
               </div>
             </div>

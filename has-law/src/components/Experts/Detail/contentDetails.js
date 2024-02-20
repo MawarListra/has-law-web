@@ -77,7 +77,7 @@ const ContentExpertsDetail = () => {
                 letterSpacing: "0.5px",
               }}
             >
-              {currTypdetail?.toUpperCase()}
+              {detail?.categories?.toUpperCase()}
             </span>
           </div>
         </div>

@@ -96,7 +96,16 @@ const Footer = ({}) => {
             </span>
             <span className="text-desc-footer">Plaza Sentral 15th Floor</span>
             <span className="text-desc-footer text-md-left text-center">
-              Jln. Jendral Sudirman Kav 47 - 48 Jakarta Selatan 12930 Indonesia
+              Jln. Jendral Sudirman
+            </span>
+            <span className="text-desc-footer text-md-left text-center">
+              Kav 47 - 48
+            </span>
+            <span className="text-desc-footer text-md-left text-center">
+              Jakarta Selatan 12930 Indonesia
+            </span>
+            <span className="text-desc-footer text-md-left text-center">
+              Indonesia
             </span>
           </div>
           <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
@@ -115,7 +124,7 @@ const Footer = ({}) => {
               Contacts
             </span>
             <span className="text-desc-footer">Email: info@has-law.com</span>
-            <span className="text-desc-footer">Whatsapp: +6231 2891 2891</span>
+            {/* <span className="text-desc-footer">Whatsapp: +6231 2891 2891</span> */}
             <span className="text-desc-footer">
               Phone Number: +6221 5790 5183
             </span>
