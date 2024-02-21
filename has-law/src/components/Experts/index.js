@@ -60,13 +60,13 @@ const Experts = () => {
                     })
                   }
                   onMouseOver={(e) => (
-                    (e.currentTarget.style.height = "452px"),
-                    (e.currentTarget.style.width = "346px"),
+                    (e.currentTarget.style.height = "450px"),
+                    (e.currentTarget.style.width = "321px"),
                     setMouseHover(true)
                   )} // Change height on hover
                   onMouseOut={(e) => (
                     (e.currentTarget.style.height = "423px"),
-                    (e.currentTarget.style.width = "321px"),
+                    (e.currentTarget.style.width = "278px"),
                     setMouseHover(false)
                   )} // Revert height on mouse out
                 >

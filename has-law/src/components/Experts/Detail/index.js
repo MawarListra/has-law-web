@@ -160,11 +160,11 @@ const ExpertsDetail = () => {
               }
               onMouseOver={(e) => (
                 (e.currentTarget.style.height = "450px"),
-                (e.currentTarget.style.width = "346px")
+                (e.currentTarget.style.width = "321px")
               )} // Change height on hover
               onMouseOut={(e) => (
                 (e.currentTarget.style.height = "423px"),
-                (e.currentTarget.style.width = "321px")
+                (e.currentTarget.style.width = "278px")
               )} // Revert height on mouse out
             >
               <div
