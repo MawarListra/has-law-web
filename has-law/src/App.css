@@ -567,8 +567,8 @@ body::-webkit-scrollbar {
     /* flex-shrink: 0; */
   }
   .experts-section-detail-img-each {
-    width: 100%;
-    height: 423px;
+    width: 343px;
+    height: 500px;
     flex-shrink: 0;
   }
   .experts-section-detail-name-each {

@@ -46,7 +46,7 @@ const ContentPublicationsDetail = () => {
           className="text-left"
           style={{
             color: "#515A5F",
-            fontFamily: "Helvetica",
+            fontFamily: "Montserrat",
             fontSize: "16px",
             fontStyle: "normal",
             fontWeight: 400,
@@ -67,7 +67,7 @@ const ContentPublicationsDetail = () => {
               className="flex flex-column"
               style={{
                 color: "#292D32",
-                fontFamily: "Helvetica",
+                fontFamily: "Montserrat",
                 fontSize: "14px",
                 fontStyle: "normal",
                 fontWeight: 400,
@@ -82,7 +82,7 @@ const ContentPublicationsDetail = () => {
           <span
             style={{
               color: "#F00",
-              fontFamily: "Helvetica",
+              fontFamily: "Montserrat",
               fontSize: "18px",
               fontStyle: "normal",
               fontWeight: 700,
@@ -106,7 +106,7 @@ const ContentPublicationsDetail = () => {
                 <span
                   style={{
                     color: "#515A5F",
-                    fontFamily: "Helvetica",
+                    fontFamily: "Montserrat",
                     fontSize: "12px",
                     fontStyle: "normal",
                     fontWeight: 400,
@@ -119,7 +119,7 @@ const ContentPublicationsDetail = () => {
                 <span
                   style={{
                     color: "#292D32",
-                    fontFamily: "Helvetica",
+                    fontFamily: "Montserrat",
                     fontSize: "16px",
                     fontStyle: "normal",
                     fontWeight: "700",
@@ -165,7 +165,7 @@ const ContentPublicationsDetail = () => {
                     <span
                       style={{
                         color: "#515A5F",
-                        fontFamily: "Helvetica",
+                        fontFamily: "Montserrat",
                         fontSize: "12px",
                         fontStyle: "normal",
                         fontWeight: 400,
@@ -196,7 +196,7 @@ const ContentPublicationsDetail = () => {
               style={{
                 color: "#F00",
                 textAlign: "center",
-                fontFamily: "Helvetica",
+                fontFamily: "Montserrat",
                 fontSize: "14px",
                 fontStyle: "normal",
                 fontWeight: 400,

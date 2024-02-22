@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "reactstrap";
 import logoFooter from "../../assets/logoFooter.png";
 import { useNavigate } from "react-router-dom";
-import { Instagram, Linkedin } from "react-feather";
+import { Facebook, Instagram, Linkedin, Twitter } from "react-feather";
 import Ic1 from "../../assets/achievment1.jpeg";
 import Ic2 from "../../assets/achievment2.jpg";
 import Ic3 from "../../assets/achievment3.jpeg";
@@ -21,7 +21,7 @@ const Footer = ({}) => {
             <span
               style={{
                 color: "#303030",
-                fontFamily: "Helvetica",
+                fontFamily: "Montserrat",
                 fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -79,56 +79,133 @@ const Footer = ({}) => {
               </div>
             </div>
           </div>
-          <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
-            <span
-              style={{
-                color: "#303030",
-                fontFamily: "Helvetica",
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: 700,
-                lineHeight: "normal",
-                letterSpacing: "0.5px",
-                marginBottom: 16,
-              }}
-            >
-              Location
-            </span>
-            <span className="text-desc-footer">Plaza Sentral 15th Floor</span>
-            <span className="text-desc-footer text-md-left text-center">
-              Jln. Jendral Sudirman
-            </span>
-            <span className="text-desc-footer text-md-left text-center">
-              Kav 47 - 48
-            </span>
-            <span className="text-desc-footer text-md-left text-center">
-              Jakarta Selatan 12930 Indonesia
-            </span>
-            <span className="text-desc-footer text-md-left text-center">
-              Indonesia
-            </span>
+          <div className="d-flex flex-column">
+            <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4">
+              <span
+                style={{
+                  color: "#303030",
+                  fontFamily: "Montserrat",
+                  fontSize: "18px",
+                  fontStyle: "normal",
+                  fontWeight: 700,
+                  lineHeight: "normal",
+                  letterSpacing: "0.5px",
+                  marginBottom: 8,
+                }}
+              >
+                Contact Us
+              </span>
+              <span className="d-md-flex d-none text-desc-footer text-left">
+                HAS Attorneys at Law is happy to handle yourlegal case and
+                participate in the legal aspect of your projects. Should youhave
+                any inquiries regarding legal matters, please contact us via one
+                of thefollowing channels
+              </span>
+              <span className="d-md-none d-flex text-desc-footer text-center">
+                HAS Attorneys at Law is happy to handle yourlegal case and
+                participate in the legal aspect of your projects. Should youhave
+                any inquiries regarding legal matters, please contact us via one
+                of thefollowing channels
+              </span>
+            </div>
+            <div className="d-flex flex-md-row flex-column gap-2">
+              <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4">
+                <span
+                  style={{
+                    color: "#303030",
+                    fontFamily: "Montserrat",
+                    fontSize: "18px",
+                    fontStyle: "normal",
+                    fontWeight: 700,
+                    lineHeight: "normal",
+                    letterSpacing: "0.5px",
+                    marginBottom: 8,
+                  }}
+                >
+                  Address
+                </span>
+                <span className="text-desc-footer">
+                  Plaza Sentral 15th Floor
+                </span>
+                <span className="text-desc-footer text-md-left text-center">
+                  Jln. Jendral Sudirman Kav 47 - 48
+                </span>
+                <span className="text-desc-footer text-md-left text-center">
+                  Jakarta Selatan 12930 Indonesia
+                </span>
+                <span className="text-desc-footer text-md-left text-center">
+                  Indonesia
+                </span>
+              </div>
+              <div className="d-flex flex-column">
+                <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-md-2 mb-4 ">
+                  <span
+                    style={{
+                      color: "#303030",
+                      fontFamily: "Montserrat",
+                      fontSize: "18px",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      lineHeight: "normal",
+                      letterSpacing: "0.5px",
+                      marginBottom: 8,
+                    }}
+                  >
+                    Email
+                  </span>
+                  <span className="text-desc-footer">info@has-law.com</span>
+                </div>
+                <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
+                  <span
+                    style={{
+                      color: "#303030",
+                      fontFamily: "Montserrat",
+                      fontSize: "18px",
+                      fontStyle: "normal",
+                      fontWeight: 700,
+                      lineHeight: "normal",
+                      letterSpacing: "0.5px",
+                      marginBottom: 8,
+                    }}
+                  >
+                    Phone Number
+                  </span>
+                  <span className="text-desc-footer">+6221 5790 5183</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
             <span
               style={{
                 color: "#303030",
-                fontFamily: "Helvetica",
+                fontFamily: "Montserrat",
                 fontSize: "18px",
                 fontStyle: "normal",
                 fontWeight: 700,
                 lineHeight: "normal",
                 letterSpacing: "0.5px",
-                marginBottom: 16,
+                marginBottom: 8,
               }}
             >
-              Contacts
+              Connect With Us
             </span>
-            <span className="text-desc-footer">Email: info@has-law.com</span>
+            <span className="d-md-flex d-none text-desc-footer text-left ">
+              Follow us at these channels for news and updates from HAS
+              Attorneys at Law (#everyone HAS toknow)
+            </span>
+            {/* <span style={{ color: "#f00", verticalAlign: "middle" }}>HAS</span>{" "}
+            <span>toknow)</span> */}
+            <span className="d-md-none d-flex text-desc-footer text-center ">
+              Follow us at these channels for news andupdates from HAS Attorneys
+              at Law (#everyone
+              {/* <span style={{ color: "#f00", verticalAlign: "middle" }}> */}
+              HAS
+              {/* </span> */}
+              toknow)
+            </span>
             {/* <span className="text-desc-footer">Whatsapp: +6231 2891 2891</span> */}
-            <span className="text-desc-footer">
-              Phone Number: +6221 5790 5183
-            </span>
-            <div className="d-flex flex-row gap-2">
+            <div className="d-flex flex-row gap-2 mt-2">
               <div
                 className="d-flex justify-content-center align-items-center p-1"
                 style={{
@@ -154,6 +231,36 @@ const Footer = ({}) => {
                 }}
               >
                 <Linkedin
+                  color="#0F4C81"
+                  style={{ strokeWidth: 1 }}
+                  stroke="#0F4C81"
+                />
+              </div>
+              <div
+                className="d-flex justify-content-center align-items-center  p-1"
+                style={{
+                  borderRadius: "50%",
+                  height: 32,
+                  width: 32,
+                  border: "1px solid rgba(15, 76, 129, 1)",
+                }}
+              >
+                <Facebook
+                  color="#0F4C81"
+                  style={{ strokeWidth: 1 }}
+                  stroke="#0F4C81"
+                />
+              </div>
+              <div
+                className="d-flex justify-content-center align-items-center  p-1"
+                style={{
+                  borderRadius: "50%",
+                  height: 32,
+                  width: 32,
+                  border: "1px solid rgba(15, 76, 129, 1)",
+                }}
+              >
+                <Twitter
                   color="#0F4C81"
                   style={{ strokeWidth: 1 }}
                   stroke="#0F4C81"

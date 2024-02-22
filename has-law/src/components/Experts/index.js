@@ -105,7 +105,7 @@ const Experts = () => {
                     <span
                       style={{
                         color: "#FFF",
-                        fontFamily: "Helvetica",
+                        fontFamily: "Montserrat",
                         fontSize: "12px",
                         fontStyle: "normal",
                         fontWeight: 400,

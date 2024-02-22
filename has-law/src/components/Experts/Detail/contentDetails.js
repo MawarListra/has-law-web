@@ -41,11 +41,14 @@ const ContentExpertsDetail = () => {
       </div>
       <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-2 gap-2 w-md-50 w-100">
         <div className="d-flex flex-column justify-content-md-start justify-content-center ">
-          <div className="d-flex experts-section-detail-img-each justify-content-md-start justify-content-center">
+          <div
+            className="d-flex experts-section-detail-img-each justify-content-md-start justify-content-center"
+            style={{ height: "100%" }}
+          >
             <img
               className="d-flex img-fluid"
               src={baseUrl + detail?.image}
-              // style={{ width: "100%" }}
+              style={{ width: "100%" }}
               alt="Image"
             />
           </div>
@@ -69,7 +72,7 @@ const ContentExpertsDetail = () => {
               className="text-left"
               style={{
                 color: "#292D32",
-                fontFamily: "Helvetica",
+                fontFamily: "Montserrat",
                 fontSize: "14px",
                 fontStyle: "normal",
                 fontWeight: 400,
@@ -89,7 +92,7 @@ const ContentExpertsDetail = () => {
             className="d-flex flex-column"
             style={{
               color: "#515A5F",
-              fontFamily: "Helvetica",
+              fontFamily: "Montserrat",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: 400,

@@ -35,7 +35,7 @@ const ProBono = () => {
           <span
             style={{
               color: "#F00",
-              fontFamily: "Helvetica",
+              fontFamily: "Montserrat",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: 400,
@@ -51,7 +51,7 @@ const ProBono = () => {
           <span
             style={{
               color: "#292D32",
-              fontFamily: "Helvetica",
+              fontFamily: "Montserrat",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: 400,
@@ -59,17 +59,22 @@ const ProBono = () => {
               letterSpacing: "0.5px",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur. Nec accumsan elit pharetra
-            arcu erat cursus et nascetur cursus. Dignissim et et habitant amet.
-            Dictum non nam nibh sit arcu vel massa et varius. Dui in platea
-            integer sit enim. Non facilisi est luctus neque. Phasellus sit
-            tempor ornare porta sagittis vulputate nulla. Commodo commodo netus
-            porttitor non. Tristique dictum lorem sagittis netus dignissim proin
-            mattis.
-            <br /> Dui in platea integer sit enim. on facilisi est luctus neque.
-            Phasellus sit tempor ornare porta sagittis vulputate nulla. Commodo
-            commodo netus porttitor non. Tristique dictum lorem sagittis netus
-            dignissim proin mattis.
+            HAS also engaged in meaningful pro bono work aimed not only at the
+            public good yet also to set a legal breakthrough on national law,
+            under the following issue headings:
+            <br />
+            1. Representing Mr. Johanes , in case of criminal lawsuit filed by
+            his own son regarding the embezzlement of his very owned HAS has
+            also carved out a new jurisprudence on civil law that the assets
+            purchased by parents on behalf of their children will remain to
+            become the property of their parents as they are still alive
+            <br />
+            2. Representing Mr. Mahamark Erwin, regarding the allegation of
+            malpractice committed by the hospital for eye surgery
+            <br />
+            3. Representing Mr. Kensky Rottie, a 9 years old child experienced
+            in malpractice committed by the hospital for tonsillectomy
+            <br />
           </span>
         </div>
       </div>
