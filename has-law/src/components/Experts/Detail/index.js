@@ -137,10 +137,76 @@ const ExpertsDetail = () => {
         <span className="pro-bono-title">Meet Our Experts</span>
       </div>
       <div
-        className="d-flex flex-row justify-content-center w-100"
+        className="d-flex flex-row  justify-content-between w-100"
         style={{ gap: 10, overflowX: "auto" }}
       >
-        {renderCategories}
+        {categories.map((e) => {
+          return (
+            <Button
+              style={
+                e?.name === currType
+                  ? {
+                      backgroundColor: "#FF0000",
+                      display: "flex",
+                      width: "89px",
+                      height: "48px",
+                      padding: "8px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "8px",
+                      flexShrink: 0,
+                      borderRadius: "5px",
+                      borderColor: "#FF0000",
+                    }
+                  : {
+                      display: "flex",
+                      width: "89px",
+                      height: "48px",
+                      padding: "8px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "8px",
+                      flexShrink: 0,
+                      borderRadius: "5px",
+                      backgroundColor: "transparent",
+                      border: "1px solid transparent",
+                    }
+              }
+              key={e?.id}
+              onClick={() => {
+                setCurrType(e?.name);
+              }}
+            >
+              <span
+                style={
+                  e?.name === currType
+                    ? {
+                        color: "#FFF",
+                        fontFeatureSettings: "clig off liga off",
+                        fontFamily: "Nunito Sans",
+                        fontSize: 14,
+                        fontStyle: "normal",
+                        fontWeight: 700,
+                        lineHeight: "normal",
+                        letterSpacing: 0.5,
+                      }
+                    : {
+                        color: "#FF0000",
+                        fontFeatureSettings: "clig off liga off",
+                        fontFamily: "Nunito Sans",
+                        fontSize: 14,
+                        fontStyle: "normal",
+                        fontWeight: 700,
+                        lineHeight: "normal",
+                        letterSpacing: 0.5,
+                      }
+                }
+              >
+                {e?.name === "all" ? "All" : e?.name}
+              </span>
+            </Button>
+          );
+        })}
       </div>
       <div className="d-flex flex-wrap flex-md-row flex-column justify-content-md-center justify-content-between align-items-md-end align-items-center text-center gap-4 w-100 experts-section-detail-img py-4">
         {datas.map((e, i) => {

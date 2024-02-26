@@ -217,11 +217,14 @@ const Footer = ({}) => {
               >
                 <Instagram
                   color="#0F4C81"
-                  style={{ strokeWidth: 1 }}
+                  style={{ strokeWidth: 1, cursor: "pointer" }}
                   stroke="#0F4C81"
+                  onClick={() =>
+                    window.open("https://www.instagram.com/has.law/", "_blank")
+                  }
                 />
               </div>
-              <div
+              {/* <div
                 className="d-flex justify-content-center align-items-center  p-1"
                 style={{
                   borderRadius: "50%",
@@ -235,7 +238,7 @@ const Footer = ({}) => {
                   style={{ strokeWidth: 1 }}
                   stroke="#0F4C81"
                 />
-              </div>
+              </div> */}
               <div
                 className="d-flex justify-content-center align-items-center  p-1"
                 style={{
@@ -247,8 +250,14 @@ const Footer = ({}) => {
               >
                 <Facebook
                   color="#0F4C81"
-                  style={{ strokeWidth: 1 }}
+                  style={{ strokeWidth: 1, cursor: "pointer" }}
                   stroke="#0F4C81"
+                  onClick={() =>
+                    window.open(
+                      "https://www.facebook.com/profile.php?id=100075953375590&mibextid=ZbWKwL",
+                      "_blank"
+                    )
+                  }
                 />
               </div>
               <div
@@ -262,8 +271,11 @@ const Footer = ({}) => {
               >
                 <Twitter
                   color="#0F4C81"
-                  style={{ strokeWidth: 1 }}
+                  style={{ strokeWidth: 1, cursor: "pointer" }}
                   stroke="#0F4C81"
+                  onClick={() =>
+                    window.open("https://x.com/HASattorneys", "_blank")
+                  }
                 />
               </div>
             </div>

@@ -16,9 +16,7 @@ const Experts = () => {
   const [mouseHover, setMouseHover] = useState(false);
   const getDatas = async () => {
     try {
-      const resp = await axios.get(
-        `${baseUrl}v1/partner/getall?categories=partners`
-      );
+      const resp = await axios.get(`${baseUrl}v1/partner/getcompro`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
         setDatas(resp?.data?.data);
       } else {

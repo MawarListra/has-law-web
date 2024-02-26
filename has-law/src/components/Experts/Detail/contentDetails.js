@@ -52,7 +52,7 @@ const ContentExpertsDetail = () => {
               alt="Image"
             />
           </div>
-          <div className="d-flex flex-column justify-content-md-start justify-content-center px-md-0 px-4">
+          <div className="d-md-flex d-none flex-column justify-content-md-start justify-content-center px-md-0 px-4">
             <span
               className="text-left"
               style={{
@@ -70,6 +70,37 @@ const ContentExpertsDetail = () => {
             </span>
             <span
               className="text-left"
+              style={{
+                color: "#292D32",
+                fontFamily: "Montserrat",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "23px",
+                letterSpacing: "0.5px",
+              }}
+            >
+              {detail?.categories?.toUpperCase()}
+            </span>
+          </div>
+          <div className="d-md-none d-flex flex-column justify-content-md-start justify-content-center px-md-0 px-4">
+            <span
+              className=" text-center"
+              style={{
+                color: "#FF0000",
+                fontFamily: "Playfair Display",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "23px",
+                letterSpacing: "0.5px",
+                wordBreak: "break-word",
+              }}
+            >
+              {detail?.name}
+            </span>
+            <span
+              className="text-center"
               style={{
                 color: "#292D32",
                 fontFamily: "Montserrat",
