@@ -8,72 +8,13 @@ import VideoHero from "../../assets/hero_video.mp4";
 const Hero = ({ id, scrollToDiv }) => {
   const navigate = useNavigate();
 
-  // const playVideo = () => {
-  //   const video = document.getElementById("heroVideo");
-  //   if (video) {
-  //     console.log("cek here");
-  //     video.play().catch(function (error) {
-  //       console.log("Error playing the video:", error);
-  //     });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   playVideo();
-  // }, []);
-
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   console.log("cek video", video);
-
-  //   // Play the video when the user interacts with the page
-  //   function playVideo() {
-  //     video.play().catch(function (error) {
-  //       console.log("Error playing the video:", error);
-  //     });
-  //   }
-
-  //   // Check if the video is visible in the viewport
-  //   function isVideoVisible() {
-  //     var rect = video.getBoundingClientRect();
-  //     return (
-  //       rect.top >= 0 &&
-  //       rect.left >= 0 &&
-  //       rect.bottom <=
-  //         (window.innerHeight || document.documentElement.clientHeight) &&
-  //       rect.right <=
-  //         (window.innerWidth || document.documentElement.clientWidth)
-  //     );
-  //   }
-
-  //   // Check if the video is visible when the page loads
-  //   if (isVideoVisible()) {
-  //     playVideo();
-  //   }
-
-  //   // Check if the video becomes visible during scrolling
-  //   window.addEventListener("scroll", function () {
-  //     if (isVideoVisible()) {
-  //       playVideo();
-  //       // Remove the scroll event listener after the video starts playing
-  //       window.removeEventListener("scroll", arguments.callee);
-  //     }
-  //   });
-
-  //   // Check if the video becomes visible during resizing
-  //   window.addEventListener("resize", function () {
-  //     if (isVideoVisible()) {
-  //       playVideo();
-  //     }
-  //   });
-  // });
-
   return (
     <div className="hero-background" style={{}} id={id}>
       <video
         className="d-md-flex d-none"
         id="heroVideo"
-        autoPlay="autoplay"
-        muted
+        autoPlay
+        muted="true"
         loop
         playsInline
       >
@@ -81,24 +22,11 @@ const Hero = ({ id, scrollToDiv }) => {
         Your browser does not support the video tag.
       </video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
-        <div
-          className="d-flex d-md-none w-100 h-100"
-          dangerouslySetInnerHTML={{
-            __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsinline
-          src="${VideoHero}"
-        />,
-      `,
-          }}
-        >
-          {/* <video id="heroVideo" autoPlay="autoplay" muted loop playsInline>
+        <div className="d-flex d-md-none w-100 h-100">
+          <video id="heroVideo" autoPlay muted="true" loop playsInline>
             <source src={VideoHero} type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
         </div>
         <div className="d-md-flex d-none justify-content-center align-items-center w-full">
           <ArrowDownCircle
