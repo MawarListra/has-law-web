@@ -81,11 +81,24 @@ const Hero = ({ id, scrollToDiv }) => {
         Your browser does not support the video tag.
       </video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
-        <div className="d-flex d-md-none w-100 h-100">
-          <video id="heroVideo" autoPlay="autoplay" muted loop playsInline>
+        <div
+          className="d-flex d-md-none w-100 h-100"
+          dangerouslySetInnerHTML={{
+            __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${VideoHero}"
+        />,
+      `,
+          }}
+        >
+          {/* <video id="heroVideo" autoPlay="autoplay" muted loop playsInline>
             <source src={VideoHero} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
         <div className="d-md-flex d-none justify-content-center align-items-center w-full">
           <ArrowDownCircle
