@@ -41,7 +41,7 @@ const Experts = () => {
         >
           <span className="pro-bono-title">Meet Our Experts</span>
         </div>
-        <div className="d-flex flex-row justify-content-center align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
+        <div className="d-flex flex-row justify-content-md-center justify-content-between align-items-end experts-section-img text-center gap-4 w-100 paddingComponentRight paddingComponentLeft">
           {datas.map((e, i) => {
             if (i < 3) {
               return (
