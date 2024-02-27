@@ -57,14 +57,21 @@ const Hero = ({ id, scrollToDiv }) => {
 
   return (
     <div className="hero-background" style={{}} id={id}>
-      <video className="d-md-flex d-none" id="heroVideo" autoPlay muted loop>
+      <video
+        className="d-md-flex d-none"
+        id="heroVideo"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
         <source src={VideoHero} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
         <div className="d-flex d-md-none w-100 h-100">
           {/* <img src={HeroIc} className="d-flex img-fluid " alt="hero-ic" /> */}
-          <video id="heroVideo" autoPlay muted loop>
+          <video id="heroVideo" autoPlay muted loop playsInline>
             <source src={VideoHero} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
