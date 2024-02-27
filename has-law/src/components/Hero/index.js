@@ -72,7 +72,7 @@ const Hero = ({ id, scrollToDiv }) => {
       <video
         className="d-md-flex d-none"
         id="heroVideo"
-        autoPlay
+        autoPlay="autoplay"
         muted
         loop
         playsInline
@@ -82,7 +82,7 @@ const Hero = ({ id, scrollToDiv }) => {
       </video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
         <div className="d-flex d-md-none w-100 h-100">
-          <video id="heroVideo" autoPlay muted loop playsInline>
+          <video id="heroVideo" autoPlay="autoplay" muted loop playsInline>
             <source src={VideoHero} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
