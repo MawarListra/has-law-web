@@ -8,52 +8,52 @@ import VideoHero from "../../assets/hero_video.mp4";
 const Hero = ({ id, scrollToDiv }) => {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   document.addEventListener("DOMContentLoaded", function () {
-  //     var video = document.getElementById("heroVideo");
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      var video = document.getElementById("heroVideo");
 
-  //     // Play the video when the user interacts with the page
-  //     function playVideo() {
-  //       video.play().catch(function (error) {
-  //         console.log("Error playing the video:", error);
-  //       });
-  //     }
+      // Play the video when the user interacts with the page
+      function playVideo() {
+        video.play().catch(function (error) {
+          console.log("Error playing the video:", error);
+        });
+      }
 
-  //     // Check if the video is visible in the viewport
-  //     function isVideoVisible() {
-  //       var rect = video.getBoundingClientRect();
-  //       return (
-  //         rect.top >= 0 &&
-  //         rect.left >= 0 &&
-  //         rect.bottom <=
-  //           (window.innerHeight || document.documentElement.clientHeight) &&
-  //         rect.right <=
-  //           (window.innerWidth || document.documentElement.clientWidth)
-  //       );
-  //     }
+      // Check if the video is visible in the viewport
+      function isVideoVisible() {
+        var rect = video.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
 
-  //     // Check if the video is visible when the page loads
-  //     if (isVideoVisible()) {
-  //       playVideo();
-  //     }
+      // Check if the video is visible when the page loads
+      if (isVideoVisible()) {
+        playVideo();
+      }
 
-  //     // Check if the video becomes visible during scrolling
-  //     window.addEventListener("scroll", function () {
-  //       if (isVideoVisible()) {
-  //         playVideo();
-  //         // Remove the scroll event listener after the video starts playing
-  //         window.removeEventListener("scroll", arguments.callee);
-  //       }
-  //     });
+      // Check if the video becomes visible during scrolling
+      window.addEventListener("scroll", function () {
+        if (isVideoVisible()) {
+          playVideo();
+          // Remove the scroll event listener after the video starts playing
+          window.removeEventListener("scroll", arguments.callee);
+        }
+      });
 
-  //     // Check if the video becomes visible during resizing
-  //     window.addEventListener("resize", function () {
-  //       if (isVideoVisible()) {
-  //         playVideo();
-  //       }
-  //     });
-  //   });
-  // }, []);
+      // Check if the video becomes visible during resizing
+      window.addEventListener("resize", function () {
+        if (isVideoVisible()) {
+          playVideo();
+        }
+      });
+    });
+  }, [document.getElementById("heroVideo")]);
 
   return (
     <div className="hero-background" style={{}} id={id}>
