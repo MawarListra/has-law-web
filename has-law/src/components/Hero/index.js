@@ -8,25 +8,34 @@ import VideoHero from "../../assets/hero_video.mp4";
 const Hero = ({ id, scrollToDiv }) => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const videoElement = document.getElementById("heroVideo");
+    if (videoElement) {
+      console.log("Is video muted?", videoElement.muted);
+    }
+  }, []); // Empty dependency array ensures the effect runs only once after component mount
+
   return (
     <div className="hero-background" style={{}} id={id}>
       <video
         className="d-md-flex d-none"
         id="heroVideo"
         autoPlay
-        muted="true"
+        muted
         loop
         playsInline
-      >
-        <source src={VideoHero} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        src={VideoHero}
+      ></video>
       <div className="d-flex flex-column justify-content-md-end justify-content-start align-items-center hero-div w-100">
         <div className="d-flex d-md-none w-100 h-100">
-          <video id="heroVideo" autoPlay muted="true" loop playsInline>
-            <source src={VideoHero} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <video
+            id="heroVideo"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={VideoHero}
+          ></video>
         </div>
         <div className="d-md-flex d-none justify-content-center align-items-center w-full">
           <ArrowDownCircle
