@@ -8,19 +8,19 @@ import VideoHero from "../../assets/hero_video.mp4";
 const Hero = ({ id, scrollToDiv }) => {
   const navigate = useNavigate();
 
-  const playVideo = () => {
-    const video = document.getElementById("heroVideo");
-    if (video) {
-      console.log("cek here");
-      video.play().catch(function (error) {
-        console.log("Error playing the video:", error);
-      });
-    }
-  };
+  // const playVideo = () => {
+  //   const video = document.getElementById("heroVideo");
+  //   if (video) {
+  //     console.log("cek here");
+  //     video.play().catch(function (error) {
+  //       console.log("Error playing the video:", error);
+  //     });
+  //   }
+  // };
 
-  useEffect(() => {
-    playVideo();
-  }, []);
+  // useEffect(() => {
+  //   playVideo();
+  // }, []);
 
   // document.addEventListener("DOMContentLoaded", function () {
   //   console.log("cek video", video);
