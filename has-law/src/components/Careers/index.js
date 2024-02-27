@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import imgHas from "../../assets/Gambar Has.png";
 import imgHasLittle from "../../assets/Gambar Has (1).png";
+import imgHasLittle2 from "../../assets/Gambar Has (2).png";
+import imgHasLittle3 from "../../assets/Gambar Has (3).png";
+import imgHasLittle4 from "../../assets/Gambar Has (4).png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -33,16 +36,16 @@ const Careers = () => {
         style={{ height: 343, flexShrink: 0 }}
       >
         <div className="d-flex w-50">
-          <img className="d-flex img-fluid w-auto h-auto" src={imgHas} />
+          <img className="d-flex img-fluid w-auto" src={imgHas} />
         </div>
         <div className="d-flex flex-column justify-content-between gap-3">
           <div className="d-flex flex-row gap-3">
-            <img className="d-flex w-auto" src={imgHasLittle} />
-            <img className="d-flex w-auto" src={imgHasLittle} />
+            <img className="d-flex " src={imgHasLittle} />
+            <img className="d-flex " src={imgHasLittle2} />
           </div>
           <div className="d-flex flex-row gap-3">
-            <img className="d-flex w-auto" src={imgHasLittle} />
-            <img className="d-flex w-auto" src={imgHasLittle} />
+            <img className="d-flex " src={imgHasLittle3} />
+            <img className="d-flex" src={imgHasLittle4} />
           </div>
         </div>
       </div>
@@ -56,11 +59,11 @@ const Careers = () => {
         <div className="d-flex flex-column justify-content-between w-100 mx-auto gap-2">
           <div className="d-flex flex-row gap-2 " style={{ width: "49%" }}>
             <img className="d-flex img-fluid" src={imgHasLittle} />
-            <img className="d-flex img-fluid" src={imgHasLittle} />
+            <img className="d-flex img-fluid" src={imgHasLittle2} />
           </div>
           <div className="d-flex flex-row gap-2 " style={{ width: "49%" }}>
-            <img className="d-flex img-fluid" src={imgHasLittle} />
-            <img className="d-flex img-fluid" src={imgHasLittle} />
+            <img className="d-flex img-fluid" src={imgHasLittle3} />
+            <img className="d-flex img-fluid" src={imgHasLittle4} />
           </div>
         </div>
       </div>

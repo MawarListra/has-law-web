@@ -153,7 +153,14 @@ const Footer = ({}) => {
                   >
                     Email
                   </span>
-                  <span className="text-desc-footer">info@has-law.com</span>
+                  <span
+                    className="text-desc-footer"
+                    onClick={() =>
+                      window.open("mailto:info@has-law.com", "_blank")
+                    }
+                  >
+                    info@has-law.com
+                  </span>
                 </div>
                 <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
                   <span
@@ -190,21 +197,16 @@ const Footer = ({}) => {
             >
               Connect With Us
             </span>
-            <span className="d-md-flex d-none text-desc-footer text-left ">
-              Follow us at these channels for news and updates from HAS
-              Attorneys at Law (#everyone HAS toknow)
-            </span>
-            {/* <span style={{ color: "#f00", verticalAlign: "middle" }}>HAS</span>{" "}
-            <span>toknow)</span> */}
-            <span className="d-md-none d-flex text-desc-footer text-center ">
-              Follow us at these channels for news andupdates from HAS Attorneys
-              at Law (#everyone
-              {/* <span style={{ color: "#f00", verticalAlign: "middle" }}> */}
-              HAS
-              {/* </span> */}
-              toknow)
-            </span>
-            {/* <span className="text-desc-footer">Whatsapp: +6231 2891 2891</span> */}
+            <div className="text-desc-footer">
+              <span>
+                Follow us at these channels for news and updates from HAS
+                Attorneys at Law (#everyone
+              </span>
+              <span style={{ color: "#f00", verticalAlign: "middle" }}>
+                HAS
+              </span>
+              <span>toknow)</span>
+            </div>
             <div className="d-flex flex-row gap-2 mt-2">
               <div
                 className="d-flex justify-content-center align-items-center p-1"

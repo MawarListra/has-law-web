@@ -25,7 +25,8 @@ const ExpertsDetail = () => {
     try {
       const resp = await axios.get(`${baseUrl}v1/partner_categories/getall`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
-        setCategories((prev) => [...prev, ...resp?.data?.data]);
+        let arr = [...categories, ...resp?.data?.data];
+        setCategories(arr);
       } else {
         console.error("Gagal mendapatkan data. Silahkan reload page");
       }
@@ -137,7 +138,7 @@ const ExpertsDetail = () => {
         <span className="pro-bono-title">Meet Our Experts</span>
       </div>
       <div
-        className="d-flex flex-row  justify-content-between w-100"
+        className="d-flex flex-row  justify-content-md-center juatify-content-between align-item-center w-100"
         style={{ gap: 10, overflowX: "auto" }}
       >
         {categories.map((e) => {

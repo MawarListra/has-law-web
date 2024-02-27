@@ -130,6 +130,7 @@ body::-webkit-scrollbar {
     font-weight: 400;
     line-height: 23px; /* 164.286% */
     letter-spacing: 0.5px;
+    text-align: left;
   }
   .text-title-section {
     color: var(--Red, #f00);
@@ -409,6 +410,7 @@ body::-webkit-scrollbar {
     font-weight: 400;
     line-height: 23px; /* 164.286% */
     letter-spacing: 0.5px;
+    text-align: center;
   }
   .text-title-section {
     color: var(--Red, #f00);
