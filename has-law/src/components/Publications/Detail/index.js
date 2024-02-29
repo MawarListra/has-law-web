@@ -41,7 +41,7 @@ const PublicationsDetail = () => {
       </div>
 
       <div className="d-flex flex-column gap-3 w-100">
-        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto">
+        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto w-100">
           {displayedData?.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2 publication-part">
@@ -54,7 +54,10 @@ const PublicationsDetail = () => {
                     })
                   }
                 >
-                  <img className="img-fluid" src={baseUrl + e?.image} />
+                  <img
+                    className="d-flex img-fluid w-100"
+                    src={baseUrl + e?.image}
+                  />
                 </div>
                 <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
                   <span className="publication-date">
