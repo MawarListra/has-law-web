@@ -71,7 +71,6 @@ const ContentServicesDetail = () => {
                   <span className="services-sectiont-detail-paragraph-title">
                     {e?.name}
                   </span>
-
                   <div
                     className="d-flex flex-column"
                     style={{
@@ -82,6 +81,7 @@ const ContentServicesDetail = () => {
                       fontWeight: 400,
                       lineHeight: "23px",
                       letterSpacing: "0.5px",
+                      textAlign: "justify",
                     }}
                     dangerouslySetInnerHTML={createMarkup(e?.description)}
                   ></div>
@@ -89,12 +89,12 @@ const ContentServicesDetail = () => {
               );
             })}
           </div>
-          <div className="d-flex flex-column gap-2">
+          <div className="d-flex flex-column gap-2 w-md-50 w-100">
             <div className="d-flex flex-column border-bottom pb-2 gap-2">
               <div className="d-flex w-100">
                 <img
-                  className="d-flex"
-                  style={{ width: "auto", maxWidth: "100%" }}
+                  className="d-flex w-100"
+                  style={{ maxWidth: "100%" }}
                   src={baseUrl + otherDetail?.data?.image?.[0]?.image}
                 />
               </div>
@@ -105,8 +105,8 @@ const ContentServicesDetail = () => {
                   }`}
                 >
                   <img
-                    className="d-flex"
-                    style={{ width: "auto", maxWidth: "100%" }}
+                    className="d-flex w-100"
+                    style={{ maxWidth: "100%" }}
                     src={baseUrl + otherDetail?.data?.image?.[1]?.image}
                   />
                 </div>

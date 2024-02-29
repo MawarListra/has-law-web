@@ -59,10 +59,16 @@ const ContentPublicationsDetail = () => {
           </span>
         </div>
         <div className="d-flex flex-md-row flex-column gap-3 border-md-bottom border-none pb-4">
-          <div className="d-flex flex-column w-md-75 w-100 gap-2">
-            <div className="d-flex publication-detail-img">
+          <div
+            className="d-flex flex-column w-md-75 w-100 gap-2"
+            style={{ maxWidth: 916 }}
+          >
+            <div
+              className="d-flex publication-detail-img"
+              style={{ maxWidth: 916 }}
+            >
               <img
-                className="d-flex img-fluid w-md-auto w-100"
+                className="d-flex img-fluid w-100"
                 src={baseUrl + detail?.image}
               />
             </div>
@@ -83,7 +89,7 @@ const ContentPublicationsDetail = () => {
               ></div>
             </div>
           </div>
-          <div className="d-flex flex-column gap-2">
+          <div className="d-flex flex-column gap-2 more-article-container">
             <span
               style={{
                 color: "#F00",

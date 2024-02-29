@@ -357,6 +357,9 @@ body::-webkit-scrollbar {
     width: 376px;
     word-wrap: break-word;
   }
+  .more-article-container {
+    max-width: 340px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -637,5 +640,8 @@ body::-webkit-scrollbar {
   .container-text-image-scrolling {
     width: 231px;
     word-wrap: break-word;
+  }
+  .more-article-container {
+    max-width: 100%;
   }
 }

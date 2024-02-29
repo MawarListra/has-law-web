@@ -48,7 +48,14 @@ const Services = ({ id }) => {
           {datas.map((e, i) => {
             if (i < 2) {
               return (
-                <div className="d-flex flex-column gap-2 services-section-data">
+                <div
+                  className="d-flex flex-column gap-2 services-section-data"
+                  onClick={() =>
+                    navigate(`/services-detail/${e?.id}`, {
+                      state: { servicesId: e?.id },
+                    })
+                  }
+                >
                   <div className="d-flex w-full border-bottom pb-2">
                     <img
                       className="img-fluid"
@@ -63,11 +70,6 @@ const Services = ({ id }) => {
                       {e?.name}
                     </span>
                     <ArrowRight
-                      onClick={() =>
-                        navigate(`/services-detail/${e?.id}`, {
-                          state: { servicesId: e?.id },
-                        })
-                      }
                       style={{
                         strokeWidth: 1,
                         color: "white",
