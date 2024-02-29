@@ -109,7 +109,7 @@ const Footer = ({}) => {
               </span>
             </div>
             <div className="d-flex flex-md-row flex-column gap-2">
-              <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4">
+              <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4 w-md-50 w-100">
                 <span
                   style={{
                     color: "#303030",
@@ -137,7 +137,7 @@ const Footer = ({}) => {
                   Indonesia
                 </span>
               </div>
-              <div className="d-flex flex-column">
+              <div className="d-flex flex-column w-md-50 w-100">
                 <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-md-2 mb-4 ">
                   <span
                     style={{
