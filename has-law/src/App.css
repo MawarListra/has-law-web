@@ -244,7 +244,8 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: 999;
     right: 30px;
-    top: 80vh;
+    /* top: 80vh; */
+    bottom: 100px;
     background-color: white;
     cursor: pointer;
   }
@@ -523,7 +524,8 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: 999;
     right: 16px;
-    top: 80vh;
+    /* top: 80vh; */
+    bottom: 50px;
     background-color: white;
     cursor: pointer;
   }
