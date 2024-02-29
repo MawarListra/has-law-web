@@ -11,7 +11,10 @@ const About = ({ id }) => {
     <div className="w-100 h-auto" id={id}>
       <div className="container-fluid d-flex flex-md-row flex-column justify-content-center align-items-start paddingComponentRight paddingComponentLeft mx-auto gap-md-5 gap-2 py-4">
         <div className="d-flex flex-column about-text">
-          <span className="text-title-section">
+          <span
+            className="text-title-section mb-4"
+            style={{ textAlign: "center" }}
+          >
             {`HARTAMULYA, ANDRYANUS SIAHAAN (HAS Attorneys at Law)`}
           </span>
           <span
@@ -20,6 +23,7 @@ const About = ({ id }) => {
               wordBreak: "break-word",
               whiteSpace: "pre-line",
               display: "block",
+              textAlign: "justify",
             }}
           >
             {isReadMore ? text.slice(0, 500) + "... " : text}
@@ -31,7 +35,7 @@ const About = ({ id }) => {
             </span>
           </span>
         </div>
-        <div className="d-flex flex-row gap-2 w-auto">
+        {/* <div className="d-flex flex-row gap-2 w-auto">
           <div className="d-flex flex-column gap-2">
             <div>
               <img className="d-flex img-fluid" src={image1} />
@@ -43,7 +47,7 @@ const About = ({ id }) => {
           <div>
             <img className="d-flex img-fluid" src={image3} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

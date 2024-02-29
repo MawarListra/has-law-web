@@ -51,8 +51,7 @@ const ServicesDetail = () => {
   }, [getServiceData]);
 
   return (
-    <>
-      {" "}
+    <div className="d-flex flex-column container-fluid mb-4">
       <div className="d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
         <div className="d-flex justify-content-center align-items-center w-100 paddingComponentRight paddingComponentLeft mx-auto">
           <span className="pro-bono-title paddingComponentRight paddingComponentLeft mx-4">
@@ -60,7 +59,7 @@ const ServicesDetail = () => {
             businesses, and organizations, offering diverse legal expertise.
           </span>
         </div>
-        <div className="d-flex flex-row flex-wrap justify-content-between align-items-start gap-md-5 gap-2 mx-auto">
+        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-md-5 gap-2 mx-auto">
           {datas.map((e, i) => {
             return (
               <div className="d-flex flex-column gap-2">
@@ -132,7 +131,7 @@ const ServicesDetail = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

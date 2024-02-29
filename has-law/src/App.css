@@ -114,14 +114,14 @@ body::-webkit-scrollbar {
 
     /* Paragraph/Small */
     font-family: Helvetica;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 23px; /* 164.286% */
     letter-spacing: 0.5px;
   }
   .text-desc-footer {
-    color: var(--Gray, #515a5f);
+    color: #fff;
 
     /* Paragraph/Small */
     font-family: Helvetica;
@@ -245,7 +245,7 @@ body::-webkit-scrollbar {
     z-index: 999;
     right: 30px;
     /* top: 80vh; */
-    bottom: 100px;
+    bottom: 30px;
     background-color: white;
     cursor: pointer;
   }
@@ -338,7 +338,7 @@ body::-webkit-scrollbar {
     position: relative;
   }
   .about-text {
-    width: 560px;
+    width: 700px;
     /* height: 162px; */
     flex-shrink: 0;
   }
@@ -402,7 +402,7 @@ body::-webkit-scrollbar {
     letter-spacing: 0.5px;
   }
   .text-desc-footer {
-    color: var(--Gray, #515a5f);
+    color: #fff;
 
     /* Paragraph/Small */
     font-family: Helvetica;
@@ -525,7 +525,7 @@ body::-webkit-scrollbar {
     z-index: 999;
     right: 16px;
     /* top: 80vh; */
-    bottom: 50px;
+    bottom: 30px;
     background-color: white;
     cursor: pointer;
   }

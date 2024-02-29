@@ -14,13 +14,13 @@ const Footer = ({}) => {
   const [openModal, setOpenModal] = useState(false);
   const [currImg, setCurrImg] = useState("");
   return (
-    <div className="w-100">
+    <div className="w-100 bg-black">
       <div className="container-fluid d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center paddingComponentRight paddingComponentLeft py-4 mt-4">
         <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-5 w-100">
-          <div className="d-flex flex-column align-items-center footer-part">
+          {/* <div className="d-flex flex-column align-items-center footer-part">
             <span
               style={{
-                color: "#303030",
+                color: "#fff",
                 fontFamily: "Montserrat",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -78,12 +78,12 @@ const Footer = ({}) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="d-flex flex-column">
             <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4">
               <span
                 style={{
-                  color: "#303030",
+                  color: "#fff",
                   fontFamily: "Montserrat",
                   fontSize: "18px",
                   fontStyle: "normal",
@@ -96,23 +96,23 @@ const Footer = ({}) => {
                 Contact Us
               </span>
               <span className="d-md-flex d-none text-desc-footer text-left">
-                HAS Attorneys at Law is happy to handle yourlegal case and
-                participate in the legal aspect of your projects. Should youhave
-                any inquiries regarding legal matters, please contact us via one
-                of thefollowing channels
+                HAS Attorneys at Law is happy to handle your legal case and
+                participate in the legal aspect of your projects. Should you
+                have any inquiries regarding legal matters, please contact us
+                via one of the following channels.
               </span>
               <span className="d-md-none d-flex text-desc-footer text-center">
-                HAS Attorneys at Law is happy to handle yourlegal case and
-                participate in the legal aspect of your projects. Should youhave
-                any inquiries regarding legal matters, please contact us via one
-                of thefollowing channels
+                HAS Attorneys at Law is happy to handle your legal case and
+                participate in the legal aspect of your projects. Should you
+                have any inquiries regarding legal matters, please contact us
+                via one of the following channels.
               </span>
             </div>
             <div className="d-flex flex-md-row flex-column gap-2">
               <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-4 w-md-50 w-100">
                 <span
                   style={{
-                    color: "#303030",
+                    color: "#fff",
                     fontFamily: "Montserrat",
                     fontSize: "18px",
                     fontStyle: "normal",
@@ -141,7 +141,7 @@ const Footer = ({}) => {
                 <div className="d-flex flex-column footer-part align-items-md-start align-items-center mb-md-2 mb-4 ">
                   <span
                     style={{
-                      color: "#303030",
+                      color: "#fff",
                       fontFamily: "Montserrat",
                       fontSize: "18px",
                       fontStyle: "normal",
@@ -165,7 +165,7 @@ const Footer = ({}) => {
                 <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
                   <span
                     style={{
-                      color: "#303030",
+                      color: "#fff",
                       fontFamily: "Montserrat",
                       fontSize: "18px",
                       fontStyle: "normal",
@@ -185,7 +185,7 @@ const Footer = ({}) => {
           <div className="d-flex flex-column footer-part align-items-md-start align-items-center">
             <span
               style={{
-                color: "#303030",
+                color: "#fff",
                 fontFamily: "Montserrat",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -214,13 +214,13 @@ const Footer = ({}) => {
                   borderRadius: "50%",
                   height: 32,
                   width: 32,
-                  border: "1px solid rgba(15, 76, 129, 1)",
+                  border: "1px solid rgba(255, 255, 255, 1)",
                 }}
               >
                 <Instagram
-                  color="#0F4C81"
+                  color="#fff"
                   style={{ strokeWidth: 1, cursor: "pointer" }}
-                  stroke="#0F4C81"
+                  stroke="#fff"
                   onClick={() =>
                     window.open("https://www.instagram.com/has.law/", "_blank")
                   }
@@ -232,13 +232,13 @@ const Footer = ({}) => {
                   borderRadius: "50%",
                   height: 32,
                   width: 32,
-                  border: "1px solid rgba(15, 76, 129, 1)",
+                  border: "1px solid rgba(255, 255, 255, 1)",
                 }}
               >
                 <Linkedin
-                  color="#0F4C81"
+                  color="#fff"
                   style={{ strokeWidth: 1 }}
-                  stroke="#0F4C81"
+                  stroke="#fff"
                 />
               </div> */}
               <div
@@ -247,13 +247,13 @@ const Footer = ({}) => {
                   borderRadius: "50%",
                   height: 32,
                   width: 32,
-                  border: "1px solid rgba(15, 76, 129, 1)",
+                  border: "1px solid rgba(255, 255, 255, 1)",
                 }}
               >
                 <Facebook
-                  color="#0F4C81"
+                  color="#fff"
                   style={{ strokeWidth: 1, cursor: "pointer" }}
-                  stroke="#0F4C81"
+                  stroke="#fff"
                   onClick={() =>
                     window.open(
                       "https://www.facebook.com/profile.php?id=100075953375590&mibextid=ZbWKwL",
@@ -268,13 +268,13 @@ const Footer = ({}) => {
                   borderRadius: "50%",
                   height: 32,
                   width: 32,
-                  border: "1px solid rgba(15, 76, 129, 1)",
+                  border: "1px solid rgba(255, 255, 255, 1)",
                 }}
               >
                 <Twitter
-                  color="#0F4C81"
+                  color="#fff"
                   style={{ strokeWidth: 1, cursor: "pointer" }}
-                  stroke="#0F4C81"
+                  stroke="#fff"
                   onClick={() =>
                     window.open("https://x.com/HASattorneys", "_blank")
                   }

@@ -35,94 +35,30 @@ const ContentExpertsDetail = () => {
   }, [id]);
 
   return (
-    <div className="d-flex flex-column justify-content-between align-items-center paddingComponentRight paddingComponentLeft gap-3 py-4">
-      <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="pro-bono-title">Meet Our Experts</span>
-      </div>
-      <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-2 gap-2 w-md-50 w-100">
-        <div className="d-flex flex-column justify-content-md-start justify-content-center ">
-          <div
-            className="d-flex experts-section-detail-img-each justify-content-md-start justify-content-center"
-            style={{ height: "100%" }}
+    <div className="d-flex flex-column container-fluid">
+      <div className="d-flex flex-column justify-content-between align-items-center paddingComponentRight paddingComponentLeft gap-3 py-4">
+        <div className="d-flex flex-column justify-content-center align-items-center w-100">
+          {/* <span className="pro-bono-title">Meet Our Experts</span> */}
+
+          <span
+            className="text-center pro-bono-title"
+            // style={{
+            //   color: "#FF0000",
+            //   fontFamily: "Montserrat",
+            //   fontSize: "14px",
+            //   fontStyle: "normal",
+            //   fontWeight: 700,
+            //   lineHeight: "23px",
+            //   letterSpacing: "0.5px",
+            //   wordBreak: "break-word",
+            // }}
           >
-            <img
-              className="d-flex img-fluid"
-              src={baseUrl + detail?.image}
-              style={{ width: "100%" }}
-              alt="Image"
-            />
-          </div>
-          <div className="d-md-flex d-none flex-column justify-content-md-start justify-content-center px-md-0 px-4">
-            <span
-              className="text-left"
-              style={{
-                color: "#FF0000",
-                fontFamily: "Playfair Display",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: 700,
-                lineHeight: "23px",
-                letterSpacing: "0.5px",
-                wordBreak: "break-word",
-              }}
-            >
-              {detail?.name}
-            </span>
-            <span
-              className="text-left"
-              style={{
-                color: "#292D32",
-                fontFamily: "Montserrat",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "23px",
-                letterSpacing: "0.5px",
-              }}
-            >
-              {detail?.categories?.toUpperCase()}
-            </span>
-          </div>
-          <div className="d-md-none d-flex flex-column justify-content-md-start justify-content-center px-md-0 px-4">
-            <span
-              className=" text-center"
-              style={{
-                color: "#FF0000",
-                fontFamily: "Playfair Display",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: 700,
-                lineHeight: "23px",
-                letterSpacing: "0.5px",
-                wordBreak: "break-word",
-              }}
-            >
-              {detail?.name}
-            </span>
-            <span
-              className="text-center"
-              style={{
-                color: "#292D32",
-                fontFamily: "Montserrat",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "23px",
-                letterSpacing: "0.5px",
-              }}
-            >
-              {detail?.categories?.toUpperCase()}
-            </span>
-          </div>
-        </div>
-        <div
-          className="d-flex experts-section-detail-desc-div justify-content-md-start text-md-justify text-left mt-md-0 mt-4"
-          style={{ wordBreak: "break-word" }}
-        >
-          <div
-            className="d-flex flex-column"
+            {detail?.name}
+          </span>
+          <span
+            className="text-center"
             style={{
-              color: "#515A5F",
+              color: "#292D32",
               fontFamily: "Montserrat",
               fontSize: "14px",
               fontStyle: "normal",
@@ -130,8 +66,43 @@ const ContentExpertsDetail = () => {
               lineHeight: "23px",
               letterSpacing: "0.5px",
             }}
-            dangerouslySetInnerHTML={createMarkup(detail?.description)}
-          ></div>
+          >
+            {detail?.categories?.toUpperCase()}
+          </span>
+        </div>
+        <div className="d-flex flex-md-row flex-column justify-content-center align-items-md-start align-items-center gap-md-4 gap-2 w-md-50 w-100">
+          <div className="d-flex flex-column justify-content-md-start justify-content-center ">
+            <div
+              className="d-flex experts-section-detail-img-each justify-content-md-start justify-content-center"
+              style={{ height: "100%" }}
+            >
+              <img
+                className="d-flex img-fluid"
+                src={baseUrl + detail?.image}
+                style={{ width: "100%" }}
+                alt="Image"
+              />
+            </div>
+          </div>
+          <div
+            className="d-flex experts-section-detail-desc-div justify-content-md-start text-md-justify text-left mt-md-0 mt-4"
+            style={{ wordBreak: "break-word" }}
+          >
+            <div
+              className="d-flex flex-column "
+              style={{
+                color: "#515A5F",
+                fontFamily: "Montserrat",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "23px",
+                letterSpacing: "0.5px",
+                textAlign: "justify",
+              }}
+              dangerouslySetInnerHTML={createMarkup(detail?.description)}
+            ></div>
+          </div>
         </div>
       </div>
     </div>

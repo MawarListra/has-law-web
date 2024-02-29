@@ -89,7 +89,7 @@ const Experts = () => {
                     <span
                       style={{
                         color: "#FFF",
-                        fontFamily: "Playfair Display",
+                        fontFamily: "Montserrat",
                         fontSize: "14px",
                         fontStyle: "normal",
                         fontWeight: 700,
@@ -135,7 +135,7 @@ const Experts = () => {
                 fontStyle: "normal",
                 fontWeight: 700,
                 lineHeight: "18px",
-                fontFamily: "Playfair Display",
+                fontFamily: "Montserrat",
               }}
               onClick={() => navigate("/experts")}
             >

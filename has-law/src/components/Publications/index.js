@@ -7,6 +7,7 @@ import image2 from "../../assets/services2.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { createMarkup } from "../../utils/createMarkup";
 
 const baseUrl = process.env.REACT_APP_PUBLIC_URL;
 
@@ -46,26 +47,54 @@ const Publications = () => {
           <div className="d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 mx-auto w-100">
             {displayedData?.map((e, i) => {
               return (
-                <div className="d-flex flex-column gap-2 publication-part">
+                <div
+                  className="d-flex flex-column gap-2 publication-part"
+                  style={{
+                    border: "0.5px solid #515A5F",
+                    borderRadius: 5,
+                  }}
+                  onClick={() =>
+                    navigate(`/publications-detail/${e?.id}`, {
+                      state: { publicationId: e?.id },
+                    })
+                  }
+                >
                   <div
                     className="d-flex w-full publication-img"
                     style={{ cursor: "pointer" }}
-                    onClick={() =>
-                      navigate(`/publications-detail/${e?.id}`, {
-                        state: { publicationId: e?.id },
-                      })
-                    }
                   >
                     <img
                       className="d-flex img-fluid w-100"
                       src={baseUrl + e?.image}
+                      style={{
+                        borderTopLeftRadius: 5,
+                        borderTopRightRadius: 5,
+                      }}
                     />
                   </div>
-                  <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
+                  <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto px-2">
                     <span className="publication-date">
                       {moment(e?.createdAt).format("DD MMMM YYYY")}
                     </span>
                     <span className="publication-title">{e?.title}</span>
+                  </div>
+                  <div>
+                    <div
+                      className="flex flex-column px-2"
+                      style={{
+                        color: "#292D32",
+                        fontFamily: "Montserrat",
+                        fontSize: "14px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "23px",
+                        letterSpacing: "0.5px",
+                        textAlign: "justify",
+                      }}
+                      dangerouslySetInnerHTML={createMarkup(
+                        e?.description.slice(0, 200) + "..."
+                      )}
+                    ></div>
                   </div>
                 </div>
               );
@@ -89,7 +118,7 @@ const Publications = () => {
                 fontStyle: "normal",
                 fontWeight: 700,
                 lineHeight: "18px",
-                fontFamily: "Playfair Display",
+                fontFamily: "Montserrat",
               }}
             >
               See More

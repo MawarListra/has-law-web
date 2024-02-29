@@ -161,9 +161,10 @@ const Homepage = () => {
 
   return (
     <div
-      className={`d-flex w-100 flex-column bg-white ${
-        location?.pathname !== "/" ? "container-fluid" : ""
-      }`}
+      // className={`d-flex w-100 flex-column bg-white ${
+      //   location?.pathname !== "/" ? "container-fluid" : ""
+      // }`}
+      className="d-flex w-100 flex-column bg-white"
       style={{ position: "relative", overflowX: "hidden" }}
     >
       {showNavbar && (

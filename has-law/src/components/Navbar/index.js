@@ -38,9 +38,8 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
   return (
     <nav className={`${location?.pathname === "/" ? "fixed-top" : ""}`}>
       <div
-        className={`d-flex flex-row justify-content-md-center justify-content-between align-items-center py-2 paddingComponentRight paddingComponentLeft bg-white ${
-          location?.pathname === "/" ? "px-md-0 px-3" : ""
-        }`}
+        className={`d-flex flex-row justify-content-md-center justify-content-between align-items-center py-2 paddingComponentRight paddingComponentLeft bg-white
+        px-md-0 px-3 `}
         style={{ maxHeight: "80px" }}
       >
         <div

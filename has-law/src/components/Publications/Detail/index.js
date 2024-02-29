@@ -35,43 +35,44 @@ const PublicationsDetail = () => {
   }, [displayedData]);
 
   return (
-    <div className=" d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
-      <div className="d-flex justify-content-center align-items-center w-100">
-        <span className="pro-bono-title">Publications</span>
-      </div>
-
-      <div className="d-flex flex-column gap-3 w-100">
-        <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto w-100">
-          {displayedData?.map((e, i) => {
-            return (
-              <div className="d-flex flex-column gap-2 publication-part">
-                <div
-                  className="d-flex w-full publication-img"
-                  style={{ cursor: "pointer" }}
-                  onClick={() =>
-                    navigate(`/publications-detail/${e?.id}`, {
-                      state: { publicationId: e?.id },
-                    })
-                  }
-                >
-                  <img
-                    className="d-flex img-fluid w-100"
-                    src={baseUrl + e?.image}
-                  />
-                </div>
-                <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
-                  <span className="publication-date">
-                    {moment(e?.createdAt).format("DD MMMM YYYY")}
-                  </span>
-                  <span className="publication-title">{e?.title}</span>
-                </div>
-              </div>
-            );
-          })}
+    <div className="d-flex flex-column container-fluid">
+      <div className=" d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">
+        <div className="d-flex justify-content-center align-items-center w-100">
+          <span className="pro-bono-title">Publications</span>
         </div>
-      </div>
 
-      {/* <div className="d-flex w-100 justify-content-center align-items-center">
+        <div className="d-flex flex-column gap-3 w-100">
+          <div className="d-flex flex-row flex-wrap justify-content-center align-items-start gap-2 mx-auto w-100">
+            {displayedData?.map((e, i) => {
+              return (
+                <div className="d-flex flex-column gap-2 publication-part">
+                  <div
+                    className="d-flex w-full publication-img"
+                    style={{ cursor: "pointer" }}
+                    onClick={() =>
+                      navigate(`/publications-detail/${e?.id}`, {
+                        state: { publicationId: e?.id },
+                      })
+                    }
+                  >
+                    <img
+                      className="d-flex img-fluid w-100"
+                      src={baseUrl + e?.image}
+                    />
+                  </div>
+                  <div className="d-flex flex-column justify-content-start align-items-start w-100 mx-auto">
+                    <span className="publication-date">
+                      {moment(e?.createdAt).format("DD MMMM YYYY")}
+                    </span>
+                    <span className="publication-title">{e?.title}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* <div className="d-flex w-100 justify-content-center align-items-center">
         <Button
           style={{
             color: "#F00",
@@ -88,13 +89,14 @@ const PublicationsDetail = () => {
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight: "18px",
-              fontFamily: "Playfair Display",
+              fontFamily: "Montserrat",
             }}
           >
             See More
           </span>
         </Button>
       </div> */}
+      </div>
     </div>
   );
 };
