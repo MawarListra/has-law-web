@@ -185,7 +185,7 @@ const Homepage = () => {
           )
         }
       >
-        <img className="d-flex w-auto" src={IcWA} />
+        <img className="d-flex img-fluid" src={IcWA} />
       </div>
       {/* )} */}
       <Footer />
