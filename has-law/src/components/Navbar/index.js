@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/logo.png";
+import LogoMobile from "../../assets/logo-mobile.png";
 import { Button } from "reactstrap";
 import { Menu, XCircle } from "react-feather";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -46,9 +47,21 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
           className="d-flex justify-content-start align-items-center "
           style={{ width: "25%" }}
         >
-          <div className="d-flex navbar-logo">
+          <div className="d-md-flex d-none navbar-logo">
             <img
               src={Logo}
+              alt="logo"
+              onClick={() => {
+                navigate("/");
+                setCurrIdx(5);
+              }}
+              style={{ cursor: "pointer" }}
+              className="d-flex img-fluid"
+            />
+          </div>
+          <div className="d-md-none d-flex navbar-logo">
+            <img
+              src={LogoMobile}
               alt="logo"
               onClick={() => {
                 navigate("/");
