@@ -177,7 +177,7 @@ const Homepage = () => {
       )}
       {renderContent}
       {/* {location?.pathname !== "/" && ( */}
-      <div
+      {/* <div
         className="d-flex p-2 ic-whatsapp"
         onClick={() =>
           window.open(
@@ -187,7 +187,7 @@ const Homepage = () => {
         }
       >
         <img className="d-flex img-fluid" src={IcWA} />
-      </div>
+      </div> */}
       {/* )} */}
       <Footer />
     </div>
