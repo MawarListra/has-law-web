@@ -176,19 +176,19 @@ const Homepage = () => {
         />
       )}
       {renderContent}
-      {location?.pathname !== "/" && (
-        <div
-          className="d-flex p-2 ic-whatsapp"
-          onClick={() =>
-            window.open(
-              "https://api.whatsapp.com/send?phone=+6287857905183&text=Halo%!",
-              "_blank"
-            )
-          }
-        >
-          <img className="d-flex img-fluid" src={IcWA} />
-        </div>
-      )}
+      {/* {location?.pathname !== "/" && ( */}
+      <div
+        className="d-flex p-2 ic-whatsapp"
+        onClick={() =>
+          window.open(
+            "https://api.whatsapp.com/send?phone=+6287857905183&text=Halo%!",
+            "_blank"
+          )
+        }
+      >
+        <img className="d-flex img-fluid" src={IcWA} />
+      </div>
+      {/* )} */}
       <Footer />
     </div>
   );
