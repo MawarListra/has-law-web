@@ -24,6 +24,8 @@ const Homepage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState(false);
+  const message =
+    "Halo HAS Attorneys at Law. Saya ingin konsultasi seputar bantuan hukum!";
   // const [activeContent, setActiveContent] = useState();
   const listMenu = [
     {
@@ -181,7 +183,9 @@ const Homepage = () => {
         className="d-flex p-2 ic-whatsapp"
         onClick={() =>
           window.open(
-            "https://api.whatsapp.com/send?phone=+6287857905183&text=Halo%!",
+            `https://api.whatsapp.com/send?phone=+6287857905183&text=${encodeURIComponent(
+              message
+            )}`,
             "_blank"
           )
         }
