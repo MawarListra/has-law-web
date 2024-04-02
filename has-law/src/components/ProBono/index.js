@@ -45,10 +45,10 @@ const ProBono = () => {
                 textAlign: "justify",
               }}
             >
-              We understand that not everybody are financially wealthy, and
-              thus, we provide services for those who needs legal services but
-              can’t afford the fee. We are commited to provide the best services
-              for our clients, in order to bring about justice for the general
+              We understand that not everybody is financially wealthy, and thus,
+              we provide services for those who needs legal services but can’t
+              afford the fee. We are committed to provide the best services for
+              our clients, in order to bring about justice for the general
               public.
             </span>
             <span
@@ -67,17 +67,18 @@ const ProBono = () => {
               public good yet also to set a legal breakthrough on national law,
               under the following issue headings:
               <br />
-              1. Representing Mr. Johanes , in case of criminal lawsuit filed by
-              his own son regarding the embezzlement of his very owned HAS has
-              also carved out a new jurisprudence on civil law that the assets
-              purchased by parents on behalf of their children will remain to
-              become the property of their parents as they are still alive
+              1. Representing Mr. Johanes, in case of a criminal lawsuit filed
+              by his own son regarding the embezzlement of his very owned HAS
+              has also carved out a new jurisprudence on civil law that the
+              assets purchased by parents on behalf of their children will
+              remain to become the property of their parents as they are still
+              alive.
               <br />
               2. Representing Mr. Mahamark Erwin, regarding the allegation of
-              malpractice committed by the hospital for eye surgery
+              malpractice committed by the hospital for eye surgery.
               <br />
               3. Representing Mr. Kensky Rottie, a 9 years old child experienced
-              in malpractice committed by the hospital for tonsillectomy
+              in malpractice committed by the hospital for tonsillectomy.
               <br />
             </span>
           </div>

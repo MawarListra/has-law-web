@@ -90,7 +90,7 @@ const ServicesDetail = () => {
       <div className="d-flex flex-row justify-content-between align-items-end w-100 mt-4 services-section-detail-bottom">
         <div className="d-flex justify-content-start ">
           <span className="pro-bono-title text-left">
-            Over the years, Attorneys at Law forged enduring client bonds,
+            Over the years, HAS Attorneys at Law forged enduring client bonds,
             showcasing excellence and a proven track record, gaining trust
             across diverse sectors.
           </span>
