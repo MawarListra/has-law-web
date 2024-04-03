@@ -175,10 +175,11 @@ body::-webkit-scrollbar {
     width: "33%";
   }
   .publication-part {
-    width: 571.002px;
+    width: 572px;
+    height: 393px;
   }
   .publication-img {
-    width: 571.002px;
+    width: 572px;
     height: 310px;
     flex-shrink: 0;
   }
