@@ -176,7 +176,7 @@ body::-webkit-scrollbar {
   }
   .publication-part {
     width: 572px;
-    height: 393px;
+    min-height: 393px;
   }
   .publication-img {
     width: 572px;
