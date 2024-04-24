@@ -53,7 +53,7 @@ const Hero = ({ id, scrollToDiv }) => {
               padding: 32,
             }}
           >
-            <span className="text-hero">PERSERVERANCE LAWYERS</span>
+            <span className="text-hero">PERSEVERANCE LAWYERS</span>
           </div>
           <div
             className="d-flex justify-content-center align-items-center "
@@ -78,7 +78,7 @@ const Hero = ({ id, scrollToDiv }) => {
               padding: 24,
             }}
           >
-            <span className="text-hero">PERSERVERANCE LAWYERS</span>
+            <span className="text-hero">PERSEVERANCE LAWYERS</span>
           </div>
           <div className="d-md-none d-flex w-25 justify-content-center align-items-center border-bottom"></div>
 
