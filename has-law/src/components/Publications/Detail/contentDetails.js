@@ -74,7 +74,7 @@ const ContentPublicationsDetail = () => {
             </div>
             <div>
               <div
-                className="flex flex-column"
+                className="flex flex-column content-wrapper"
                 style={{
                   color: "#292D32",
                   fontFamily: "Montserrat",
