@@ -9,6 +9,7 @@ import {
   Publications,
   ProBono,
   Careers,
+  Achievements,
 } from "../components";
 import { animateScroll as scroll } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -52,6 +53,11 @@ const Homepage = () => {
       id: "careers",
       label: "CAREERS",
       detail: "/careers",
+    },
+    {
+      id: "achievements",
+      label: "ACHIEVEMENTS",
+      detail: "/achievements",
     },
   ];
 
@@ -158,6 +164,8 @@ const Homepage = () => {
       return <ProBono />;
     } else if (str.includes("careers")) {
       return <Careers />;
+    } else if (str.includes("achievements")) {
+      return <Achievements />;
     }
   }, [location?.pathname]);
 

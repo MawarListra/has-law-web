@@ -8,3 +8,4 @@ export { default as Publications } from "./Publications";
 export { default as ProBono } from "./ProBono";
 export { default as Careers } from "./Careers";
 export { default as ModalImage } from "./ModalImage";
+export { default as Achievements } from "./Achievements";

@@ -14,7 +14,7 @@ import ServicesDetail from "./components/Services/Detail";
 import ContentServicesDetail from "./components/Services/Detail/contentDetails";
 import PublicationsDetail from "./components/Publications/Detail";
 import ContentPublicationsDetail from "./components/Publications/Detail/contentDetails";
-import { Careers, ProBono } from "./components";
+import { Achievements, Careers, ProBono } from "./components";
 
 function App() {
   return (
@@ -87,6 +87,15 @@ function App() {
           element={
             <Homepage>
               <Careers />
+            </Homepage>
+          }
+        />
+        {/* acievements */}
+        <Route
+          path="/achievements"
+          element={
+            <Homepage>
+              <Achievements />
             </Homepage>
           }
         />

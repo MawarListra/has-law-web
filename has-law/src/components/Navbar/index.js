@@ -9,12 +9,12 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [currPath, setCurrPath] = useState("/");
-  const [currIdx, setCurrIdx] = useState(5);
+  const [currIdx, setCurrIdx] = useState(6);
 
   useEffect(() => {
     let str = location.pathname.split("-");
     console.log("cek str navbar", str, currPath, currIdx);
-    if (currIdx === 5) {
+    if (currIdx === 6) {
       var menuItems = document.querySelectorAll(
         "#container-button-menu div button span"
       );
@@ -53,7 +53,7 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
               alt="logo"
               onClick={() => {
                 navigate("/");
-                setCurrIdx(5);
+                setCurrIdx(6);
               }}
               style={{ cursor: "pointer" }}
               className="d-flex img-fluid"
@@ -91,13 +91,18 @@ const Navbar = ({ listMenu, scrollToDiv, openMenu, setOpenMenu }) => {
                     var menuItems = document.querySelectorAll(
                       "#container-button-menu div button span"
                     );
+                    console.log("cek menuItems", menuItems);
+
                     menuItems.forEach(function (item) {
                       item.classList.remove("active-menu-item");
                       item.classList.add("text-secondary");
                     });
                     const element = document.getElementById("button-menu-" + i);
+                    console.log("cek element", element, "button-menu-" + i);
+
                     element.classList.remove("text-secondary");
                     element.classList.add("active-menu-item");
+
                     navigate(e?.detail);
                   }}
                 >

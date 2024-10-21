@@ -3,6 +3,8 @@ import { X } from "react-feather";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
 const ModalImage = ({ open, toggle, data }) => {
+  console.log("cek data", data);
+
   return (
     <Modal zIndex={2000} centered isOpen={open} toggle={toggle}>
       <ModalHeader
@@ -28,9 +30,28 @@ const ModalImage = ({ open, toggle, data }) => {
           borderEndStartRadius: 25,
         }}
       >
-        <div className="d-flex justify-content-center align-items-center">
-          <div className="d-flex w-md-auto w-100">
-            <img className="d-flex img-fluid" src={data} alt="image-popup" />
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <div className="d-flex w-md-auto w-100 justify-content-center align-items-center">
+            <img
+              className="d-flex img-fluid"
+              src={data?.image}
+              alt="image-popup"
+            />
+          </div>
+          <div className="d-flex w-md-auto w-100 justify-content-center align-items-center">
+            <span
+              style={{
+                fontFamily: "Montserrat",
+                fontSize: "16px",
+                fontWeight: 700,
+                lineHeight: "19.5px",
+                letterSpacing: "0.5px",
+                textAlign: "left",
+                color: "#292D32",
+              }}
+            >
+              {data?.text}
+            </span>
           </div>
         </div>
       </ModalBody>
