@@ -3,8 +3,6 @@ import { X } from "react-feather";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 
 const ModalImage = ({ open, toggle, data }) => {
-  console.log("cek data", data);
-
   return (
     <Modal zIndex={2000} centered isOpen={open} toggle={toggle}>
       <ModalHeader

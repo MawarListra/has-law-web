@@ -33,10 +33,6 @@ const Publications = () => {
     getDisplayedData();
   }, []);
 
-  useEffect(() => {
-    console.log("cek temdisplayedDatap", displayedData);
-  }, [displayedData]);
-
   return displayedData?.length ? (
     <div className="w-100">
       <div className="container-fluid d-flex flex-column justify-content-between align-items-start paddingComponentRight paddingComponentLeft gap-4 py-4">

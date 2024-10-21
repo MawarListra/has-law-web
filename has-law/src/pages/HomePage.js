@@ -119,7 +119,6 @@ const Homepage = () => {
       setShowNavbar(shouldShowNavbar);
 
       // Check if scrolled to the top or below the Hero component
-      console.log("cek pathname", location?.pathname);
       if (location?.pathname !== "/") {
         setShowNavbar(shouldShowNavbar);
       } else if (window.scrollY === 0) {

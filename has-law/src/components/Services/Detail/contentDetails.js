@@ -21,7 +21,6 @@ const ContentServicesDetail = () => {
         `${baseUrl}v1/main_services/getdetail/${id}`
       );
       if (resp?.status === 200 && resp?.data?.status === "success") {
-        console.log("cek resp", resp);
         setDetail({ data: resp?.data?.data, services: resp?.data?.services });
       } else {
         toast.error("Gagal mendapatkan data. Silahkan reload page");

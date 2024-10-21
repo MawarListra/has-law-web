@@ -18,13 +18,11 @@ const PublicationsDetail = () => {
       const resp = await axios.get(`${baseUrl}v1/publications/getall`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
         // let temp = resp?.data?.data?.filter((e, i) => i < 4);
-        console.log("cek resp", resp?.data?.data);
         let elementsPerSubarray = 2;
         let subarrays = [];
         for (let i = 0; i < resp?.data?.data.length; i += elementsPerSubarray) {
           subarrays.push(resp?.data?.data.slice(i, i + elementsPerSubarray));
         }
-        console.log("cek subarrays", subarrays);
         setDisplayedData(subarrays);
         setMobileData(resp?.data?.data);
       } else {
@@ -38,10 +36,6 @@ const PublicationsDetail = () => {
   useEffect(() => {
     getDisplayedData();
   }, []);
-
-  useEffect(() => {
-    console.log("cek temdisplayedDatap", displayedData);
-  }, [displayedData]);
 
   return (
     <div className="d-flex flex-column container-fluid">

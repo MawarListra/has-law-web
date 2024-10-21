@@ -21,7 +21,6 @@ const ContentPublicationsDetail = () => {
     try {
       const resp = await axios.get(`${baseUrl}v1/publications/getdetail/${id}`);
       if (resp?.status === 200 && resp?.data?.status === "success") {
-        console.log("cek resp", resp);
         setDetail(resp?.data?.data);
         setOthers(resp?.data?.others);
       } else {
