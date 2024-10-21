@@ -10,7 +10,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Certi2024A from "../../assets/achievements/2024/Benchmark 40 under 1.png";
 import Certi2024B from "../../assets/achievements/2024/logo-top-100-2024 1.png";
-import Certi2024C from "../../assets/achievements/2024/SE+Asia+Law+Awards+2024+-+Finalist 1.png";
+import Certi2024C from "../../assets/achievements/2024/SE Asia Law Awards 2024 Finalist 1.png";
 
 import Certi2024Big_A from "../../assets/achievements/2024/Benchmark 40 under_BIG.png";
 import Certi2024Big_B from "../../assets/achievements/2024/logo-top-100-2024_BIG.webp";
@@ -18,7 +18,7 @@ import Certi2024Big_C from "../../assets/achievements/2024/SE+Asia+Law+Awards+20
 
 import Certi2023A from "../../assets/achievements/2023/Benchmark 40 under 1 (1).png";
 import Certi2023B from "../../assets/achievements/2023/logo-top-100-2024 1 (1).png";
-import Certi2023C from "../../assets/achievements/2023/SE+Asia+Law+Awards+2024+-+Finalist 1 (1).png";
+import Certi2023C from "../../assets/achievements/2023/SE Asia Law Awards 2024 Finalist 1 (1).png";
 
 import Certi2023Big_A from "../../assets/achievements/2023/Hartamulya Andryanus Siahaan - Attorneys at Law - Practice Leader 2023 (1).jpg";
 import Certi2023Big_B from "../../assets/achievements/2023/Screenshot 2024-10-21 at 22.14.58.png";
@@ -26,7 +26,7 @@ import Certi2023Big_C from "../../assets/achievements/2023/66329a2bba9252dc828f4
 
 import Certi2022A from "../../assets/achievements/2022/Benchmark 40 under 1 (2).png";
 import Certi2022B from "../../assets/achievements/2022/logo-top-100-2024 1 (2).png";
-import Certi2022C from "../../assets/achievements/2022/SE+Asia+Law+Awards+2024+-+Finalist 1 (2).png";
+import Certi2022C from "../../assets/achievements/2022/SE Asia Law Awards 2024 Finalist 1 (2).png";
 
 import Certi2022Big_A from "../../assets/achievements/2022/Screenshot 2024-10-21 at 22.15.46.png";
 import Certi2022Big_B from "../../assets/achievements/2022/WhatsApp Image 2023-12-05 at 8.44.52 AM.jpeg";
@@ -93,7 +93,7 @@ const Achievements = () => {
         },
         {
           image: Certi2022C,
-          title: "Top 100 Indonesian Law FIrms 2022",
+          title: "Top 100 Indonesian Law Firms 2022",
           certif: Certi2022Big_C,
         },
       ],
