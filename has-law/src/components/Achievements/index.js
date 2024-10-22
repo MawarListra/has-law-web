@@ -230,14 +230,17 @@ const Achievements = () => {
                         key={id}
                         className="d-flex flex-column w-100 justify-content-center align-items-center my-2"
                       >
-                        <div className="d-flex " style={{ height: 50 }}>
+                        <div
+                          className="d-flex justify-content-center align-items-center my-2"
+                          style={{ height: 50 }}
+                        >
                           <img
                             className="d-flex"
                             style={{ objectFit: "contain" }}
                             src={v?.image}
                           />
                         </div>
-                        <div>
+                        <div className="d-flex justify-content-center align-items-center w-100 my-4">
                           <span
                             style={{
                               fontFamily: "Montserrat",
