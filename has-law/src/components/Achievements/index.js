@@ -102,26 +102,29 @@ const Achievements = () => {
         },
       ],
     },
-    // {
-    //   year: 2022,
-    //   datas: [
-    //     {
-    //       image: Certi2022A,
-    //       title: "Top 10 Largest Litigation Practice 2022",
-    //       certif: Certi2022Big_A,
-    //     },
-    //     {
-    //       image: Certi2022B,
-    //       title: "Top Tier Firm Benchmark Litigation Asia Pacific",
-    //       certif: Certi2022Big_B,
-    //     },
-    //     {
-    //       image: Certi2022C,
-    //       title: "Top 100 Indonesian Law Firms 2022",
-    //       certif: Certi2022Big_C,
-    //     },
-    //   ],
-    // },
+    {
+      year: 2022,
+      datas: [
+        {
+          image: Certi2022A,
+          title: "Top 10 Largest Litigation Practice 2022",
+          certif: Certi2022Big_A,
+          description: "",
+        },
+        {
+          image: Certi2022B,
+          title: "Top Tier Firm Benchmark Litigation Asia Pacific",
+          certif: Certi2022Big_B,
+          description: "",
+        },
+        {
+          image: Certi2022C,
+          title: "Top 100 Indonesian Law Firms 2022",
+          certif: Certi2022Big_C,
+          description: "",
+        },
+      ],
+    },
   ];
 
   const [openModal, setOpenModal] = useState(false);
@@ -192,7 +195,14 @@ const Achievements = () => {
                       >
                         <div
                           className="d-flex justify-content-center align-items-center mb-2"
-                          style={{ width: 64, height: 64 }}
+                          style={{
+                            width:
+                              v?.title ===
+                              "Top 10 Largest Litigation Practice 2022"
+                                ? 150
+                                : 64,
+                            height: 64,
+                          }}
                         >
                           {/* <div
                             className="d-flex "
