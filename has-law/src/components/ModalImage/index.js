@@ -35,7 +35,7 @@ const ModalImage = ({ open, toggle, data }) => {
         >
           <div
             className="d-flex w-md-auto w-100 justify-content-center align-items-center mb-2"
-            style={{ height: 400, width: 400 }}
+            style={{ maxHeight: 200, maxWidth: 200 }}
           >
             <img
               className="d-flex"

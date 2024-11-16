@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { ArrowRight } from "react-feather";
-import imgHas from "../../assets/Gambar Has.png";
-import imgHasLittle from "../../assets/Gambar Has (1).png";
-import imgHasLittle2 from "../../assets/Gambar Has (2).png";
-import imgHasLittle3 from "../../assets/Gambar Has (3).png";
-import imgHasLittle4 from "../../assets/Gambar Has (4).png";
-import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import Certi2024A from "../../assets/achievements/2024/Benchmark 40 under 1.png";
-import Certi2024B from "../../assets/achievements/2024/logo-top-100-2024 1.png";
-import Certi2024C from "../../assets/achievements/2024/SE Asia Law Awards 2024 Finalist 1.png";
+import Certi2024A from "../../assets/achievements/2024/iflr1000_2024.png";
+import Certi2024B from "../../assets/achievements/2024/benchmark_litigation_2024.png";
+import Certi2024C from "../../assets/achievements/2024/hukumonline_2024.png";
+import Certi2024D from "../../assets/achievements/2024/practice_leader_2024.png";
+import Certi2024E from "../../assets/achievements/2024/alb_2024.png";
+import Certi2024F from "../../assets/achievements/2024/nexgen_2024.png";
 
 import Certi2024Big_A from "../../assets/achievements/2024/Benchmark 40 under_BIG.png";
 import Certi2024Big_B from "../../assets/achievements/2024/logo-top-100-2024_BIG.webp";
 import Certi2024Big_C from "../../assets/achievements/2024/SE+Asia+Law+Awards+2024+-+Finalist_BIG.png";
 
-import Certi2023A from "../../assets/achievements/2023/Benchmark 40 under 1 (1).png";
-import Certi2023B from "../../assets/achievements/2023/logo-top-100-2024 1 (1).png";
-import Certi2023C from "../../assets/achievements/2023/SE Asia Law Awards 2024 Finalist 1 (1).png";
+import Certi2023A from "../../assets/achievements/2023/hukumonline_2023.png";
+import Certi2023B from "../../assets/achievements/2023/practice_leader_2023.png";
+import Certi2023C from "../../assets/achievements/2023/alb_2023.png";
 
 import Certi2023Big_A from "../../assets/achievements/2023/Hartamulya Andryanus Siahaan - Attorneys at Law - Practice Leader 2023 (1).jpg";
 import Certi2023Big_B from "../../assets/achievements/2023/Screenshot 2024-10-21 at 22.14.58.png";
@@ -43,18 +37,43 @@ const Achievements = () => {
       datas: [
         {
           image: Certi2024A,
-          title: "40 & Under Benchmark Litigation",
-          certif: Certi2024Big_A,
+          title: "IFLR 1000 2024",
+          certif: Certi2024A,
+          description:
+            "<strong>Notable</strong><span>Project Development</span>",
         },
         {
           image: Certi2024B,
-          title: "Top 100 Indonesian Law Firms 2024",
-          certif: Certi2024Big_B,
+          title: "Benchmark Litigation",
+          certif: Certi2024B,
+          description:
+            "<strong>Tier 3</strong><span>Commercial and Transactions Dispute</span>",
         },
         {
           image: Certi2024C,
-          title: "ALB Se Asia Law Awards Finalist 2024",
-          certif: Certi2024Big_C,
+          title: "Hukumonline",
+          certif: Certi2024C,
+          description:
+            "<strong>Top 100 Indonesian Law Firms</strong><span>Midsize Full Service Law Firms 2024</span>",
+        },
+        {
+          image: Certi2024D,
+          title: "Hukumonline",
+          certif: Certi2024D,
+          description:
+            "<strong>Practice Leaders 2024</strong><strong>Elite I</strong><span>Criminal Law</span><span>Insurance</span><strong>Elite II</strong><span>Arbitration, Litigation & Dispute Resolution</span><strong>Elite III</strong><span>Project, Mining, Energy & Renewable Energy</span>",
+        },
+        {
+          image: Certi2024E,
+          title: "Thomson Reuters ALB Indonesia Law Awards 2024",
+          certif: Certi2024E,
+          description:
+            "<strong>Finalist</strong><span>Litigation Law Firm of the Year</span><span>Insurance Law Firm of the Year</span><span>Rising Law Firm of the Year</span><span>Dispute Resolution Lawyer of the Year</span>",
+        },
+        {
+          image: Certi2024F,
+          title: "NexGen Lawyers 2024",
+          certif: Certi2024F,
         },
       ],
     },
@@ -63,41 +82,46 @@ const Achievements = () => {
       datas: [
         {
           image: Certi2023A,
-          title: "Practice Leaders 2023",
+          title: "Hukumonline",
           certif: Certi2023Big_A,
+          description: "<strong>Top 100 Indonesia Law Firms</strong>",
         },
         {
           image: Certi2023B,
-          title: "Top 100 Indonesian Law Firms 2023",
+          title: "Practice Leaders 2023",
           certif: Certi2023Big_B,
+          description:
+            "<strong>Elite I</strong><span>Arbitration, Litigation and Dispute Resolution Insurance</span><strong>Elite II</strong><span>Criminal Law</span>",
         },
         {
           image: Certi2023C,
-          title: "ALB Se Asia Law Awards Finalist 2023",
+          title: "Thomson Reuters Asia Legal Business 2023",
           certif: Certi2023Big_C,
+          description:
+            "<strong>Finalist</strong><span>Insurance Law Firm</span><span>Rising Law Firm</span><span>Litigation Law Firm</span>",
         },
       ],
     },
-    {
-      year: 2022,
-      datas: [
-        {
-          image: Certi2022A,
-          title: "Top 10 Largest Litigation Practice 2022",
-          certif: Certi2022Big_A,
-        },
-        {
-          image: Certi2022B,
-          title: "Top Tier Firm Benchmark Litigation Asia Pacific",
-          certif: Certi2022Big_B,
-        },
-        {
-          image: Certi2022C,
-          title: "Top 100 Indonesian Law Firms 2022",
-          certif: Certi2022Big_C,
-        },
-      ],
-    },
+    // {
+    //   year: 2022,
+    //   datas: [
+    //     {
+    //       image: Certi2022A,
+    //       title: "Top 10 Largest Litigation Practice 2022",
+    //       certif: Certi2022Big_A,
+    //     },
+    //     {
+    //       image: Certi2022B,
+    //       title: "Top Tier Firm Benchmark Litigation Asia Pacific",
+    //       certif: Certi2022Big_B,
+    //     },
+    //     {
+    //       image: Certi2022C,
+    //       title: "Top 100 Indonesian Law Firms 2022",
+    //       certif: Certi2022Big_C,
+    //     },
+    //   ],
+    // },
   ];
 
   const [openModal, setOpenModal] = useState(false);
@@ -147,14 +171,18 @@ const Achievements = () => {
                   </span>
                 </div>
                 <div
-                  className="d-flex flex-row justify-content-left align-items-center"
+                  className="d-flex flex-row flex-wrap justify-content-left align-items-start"
                   style={{ width: "90%" }}
                 >
                   {e?.datas?.map((v, id) => {
                     return (
                       <div
                         key={id}
-                        className="d-flex flex-column w-100 justify-content-between align-items-start"
+                        className="d-flex flex-column justify-content-center align-items-center"
+                        style={{
+                          width: "30%", // Roughly one-third width for each item to fit 3 per row
+                          margin: "1%", // Add margin to ensure spacing between items
+                        }}
                         onClick={() => {
                           setCurrImg({
                             image: v?.certif,
@@ -162,16 +190,26 @@ const Achievements = () => {
                           });
                         }}
                       >
-                        <div className="d-flex mb-2" style={{ height: "85%" }}>
-                          <div className="d-flex h-auto w-auto">
-                            <img
-                              className="d-flex"
-                              style={{ objectFit: "contain" }}
-                              src={v?.image}
-                            />
-                          </div>
+                        <div
+                          className="d-flex justify-content-center align-items-center mb-2"
+                          style={{ width: 64, height: 64 }}
+                        >
+                          {/* <div
+                            className="d-flex "
+                            style={{ width: 64, height: 64 }}
+                          > */}
+                          <img
+                            className="d-flex"
+                            style={{
+                              objectFit: "contain",
+                              width: "100%",
+                              height: "100%",
+                            }}
+                            src={v?.image}
+                          />
+                          {/* </div> */}
                         </div>
-                        <div className="d-flex " style={{ height: "15%" }}>
+                        <div className="d-flex" style={{ height: "15%" }}>
                           <span
                             style={{
                               fontFamily: "Montserrat",
@@ -179,13 +217,26 @@ const Achievements = () => {
                               fontWeight: 700,
                               lineHeight: "19.5px",
                               letterSpacing: "0.5px",
-                              textAlign: "left",
+                              textAlign: "center",
                               color: "#292D32",
                             }}
                           >
                             {v?.title}
                           </span>
                         </div>
+                        <div
+                          className="d-flex"
+                          style={{
+                            height: "15%",
+                            fontFamily: "Montserrat",
+                            fontSize: "12px",
+                            textAlign: "center",
+                            color: "#292D32",
+                            display: "flex",
+                            flexDirection: "column",
+                          }}
+                          dangerouslySetInnerHTML={{ __html: v?.description }}
+                        ></div>
                       </div>
                     );
                   })}
@@ -232,15 +283,19 @@ const Achievements = () => {
                       >
                         <div
                           className="d-flex justify-content-center align-items-center my-2"
-                          style={{ height: 50 }}
+                          style={{ height: 100 }}
                         >
                           <img
                             className="d-flex"
-                            style={{ objectFit: "contain" }}
+                            style={{
+                              objectFit: "contain",
+                              width: "100%",
+                              height: "100%",
+                            }}
                             src={v?.image}
                           />
                         </div>
-                        <div className="d-flex justify-content-center align-items-center w-100 my-4">
+                        <div className="d-flex justify-content-center align-items-center w-100 mt-2">
                           <span
                             style={{
                               fontFamily: "Montserrat",
@@ -254,6 +309,20 @@ const Achievements = () => {
                           >
                             {v?.title}
                           </span>
+                        </div>
+                        <div className="d-flex justify-content-center align-items-center w-100 my-1">
+                          <span
+                            style={{
+                              fontFamily: "Montserrat",
+                              fontSize: "10px",
+                              fontWeight: 400,
+                              textAlign: "center",
+                              color: "#292D32",
+                              display: "flex",
+                              flexDirection: "column",
+                            }}
+                            dangerouslySetInnerHTML={{ __html: v?.description }}
+                          ></span>
                         </div>
                       </div>
                     );
